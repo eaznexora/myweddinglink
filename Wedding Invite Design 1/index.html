@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
+            var newUrl = window.location.href + "/";
+            window.history.replaceState(null, '', newUrl);
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wedding Invitation</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Italianno&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Main Invitation Content Underneath -->
+        <div class="main-invitation">
+            <div class="glitter-container" id="glitterContainer"></div>
+            <div class="invitation-placeholder">
+                <h1>Welcome</h1>
+                <p>The main invitation goes here...</p>
+            </div>
+        </div>
+
+        <!-- Intro Curtain Screen -->
+        <div class="intro-screen" id="introScreen" onclick="openInvitation()">
+
+            <!-- Top Half -->
+            <div class="curtain curtain-top" id="curtainTop">
+                <div class="bg-pattern top-pattern"></div>
+                <p class="invite-text">A Special Invitation<br>Awaits You...</p>
+                <div class="gold-ribbon-half top"></div>
+
+                <!-- Center Seal (Moves naturally with top curtain) -->
+                <div class="center-lock" id="centerLock">
+                    <div class="seal">
+                        <div class="initials">
+                            <span class="f">F</span>
+                            <span class="h">H</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Half -->
+            <div class="curtain curtain-bottom" id="curtainBottom">
+                <div class="bg-pattern bottom-pattern"></div>
+                <p class="click-text">Click to Open</p>
+                <div class="gold-ribbon-half bottom"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
