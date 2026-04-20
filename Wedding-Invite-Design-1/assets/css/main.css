@@ -9,6 +9,9 @@ html {
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
+html * {
+    max-height: 999999px; /* Disables Android Chrome text-inflation heuristic */
+}
 
 /* Hero inner canvas - fixed at design dimensions, scaled via JS */
 #heroInner {
