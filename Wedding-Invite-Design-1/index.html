@@ -187,53 +187,164 @@
                     </div>
                 </section>
 
-                <!-- Divider Line -->
-                <div class="w-full flex justify-center" style="padding-top:8px;">
-                    <div style="width:395px; height:0; border-top:1px solid rgba(30,30,30,0.5);"></div>
-                </div>
-
-
                 <!-- ================================ -->
-                <!-- WEDDING EVENTS SECTION           -->
+                <!-- MEHENDI SECTION (Pixel-perfect)  -->
                 <!-- ================================ -->
-                <section class="content-section-bg w-full flex flex-col items-center relative"
-                    style="padding-top:30px;">
+                <section id="mehendiSection" class="relative w-full overflow-visible" style="margin-top:20px;">
+                    <!-- Inner 428x870 canvas that scales to fit screen width -->
+                    <div id="mehendiInner" class="relative"
+                        style="width:428px; height:880px; transform-origin:top left;">
 
-                    <!-- Wedding Events Title -->
-                    <div class="anim-fade-up" style="width:178px; height:101px; position:relative;">
-                        <img src="assets/icons/wedding-events.svg" alt="Wedding Events"
-                            style="width:178px; height:101px;">
-                    </div>
+                        <!-- Wedding Events Title SVG -->
+                        <div class="absolute anim-fade-up"
+                            style="width:178px; height:101px; left:calc(50% - 178px/2); top:0px;">
+                            <img src="assets/icons/wedding-events.svg" alt="Wedding Events"
+                                style="width:100%; height:100%;">
+                        </div>
 
-                    <!-- ================================ -->
-                    <!-- MEHENDI CARD                     -->
-                    <!-- ================================ -->
-                    <div id="mehendiSection" class="relative w-full flex flex-col items-center anim-fade-up"
-                        style="margin-top:20px;">
                         <!-- Side Flower Top-Left -->
-                        <img src="assets/flowers/flower-top.png" alt=""
-                            class="absolute anim-slide-left pointer-events-none"
-                            style="width:140px; height:293px; left:-65px; top:-10px; transform: scaleX(-1) rotate(-18deg); z-index:3;">
+                        <div class="absolute anim-slide-left pointer-events-none flex items-start"
+                            style="width:160px; left:-5px; top:50px; z-index:3;">
+                            <img src="assets/flowers/flower-top.png" alt="" class="w-full h-auto block anim-float">
+                        </div>
 
-                        <!-- Mehendi Icon Circle -->
-                        <div class="rounded-full flex items-center justify-center"
-                            style="width:100px; height:100px; background:#F4E4CE; z-index:2;">
+                        <!-- Line 1 -->
+                        <div class="absolute anim-fade-up line-dot line-dot-light"
+                            style="width:395px; height:0px; left:calc(50% - 395px/2); top:117.5px; border-top:1px solid rgba(30, 30, 30, 0.5);">
+                        </div>
+
+                        <!-- Mehendi Card Box (Expanded Height) -->
+                        <div class="absolute anim-fade-up"
+                            style="width:396px; height:718px; left:calc(50% - 396px/2); top:138px; background:#FFF7ED; border:1px solid #A0A793; box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25); border-radius:25px; z-index:1;">
+                        </div>
+
+                        <!-- Mehendi Circle Background (Frame 13) -->
+                        <div class="absolute anim-fade-up flex items-center justify-center rounded-full"
+                            style="width:100px; height:100px; left:calc(50% - 100px/2); top:170px; background:#F4E4CE; z-index:2;">
                             <img src="assets/icons/mehendi.svg" alt="Mehendi" style="width:52px; height:63px;">
                         </div>
 
-                        <!-- Mehendi Card -->
-                        <div class="rounded-25 border flex flex-col items-center relative"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; border-color:#A0A793; box-shadow:0px 0px 4px rgba(0,0,0,0.25); margin-top:-24px; padding:60px 16px 28px;">
+                        <!-- Mehendi Evening Title (Restored Script Font) -->
+                        <div class="absolute anim-fade-up flex flex-col items-center justify-center text-center"
+                            style="width:333px; height:auto; left:calc(50% - 333px/2); top:285px; z-index:2;">
+                            <h3 class="font-cardo m-0 p-0"
+                                style="font-weight:400; font-size:50px; line-height:50px; color:#2F3B1A;">
+                                Mehendi
+                            </h3>
+                            <h3 class="font-carattere m-0 p-0"
+                                style="font-weight:400; font-size:65px; line-height:65px; color:#2F3B1A; margin-top:5px;">
+                                Evening
+                            </h3>
+                        </div>
 
+                        <!-- Subtitle -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:308px; height:54px; left:calc(50% - 308px/2); top:420px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:24px; color:#5C6749;">
+                                An evening filled with colors<br>and celebration
+                            </p>
+                        </div>
+
+                        <!-- Line 2 -->
+                        <div class="absolute anim-fade-up line-dot line-dot-dark"
+                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:480px; border-top:1px solid #475037; z-index:2;">
+                        </div>
+
+                        <!-- Event Details Row 1 -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center"
+                            style="width:69px; height:69px; left:calc(50% - 69px/2 - 108.5px); top:510px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); z-index:2;">
+                            <img src="assets/icons/Calendar.svg" alt="" style="width:32px; height:32px;">
+                        </div>
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:135px; height:54px; left:calc(50% - 135px/2 + 9.5px); top:518px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:24px; color:#5C6749;">
+                                Friday, 23<br>May 2026
+                            </p>
+                        </div>
+
+                        <!-- Event Details Row 2 -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center"
+                            style="width:69px; height:69px; left:calc(50% - 69px/2 - 108.5px); top:600px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); z-index:2;">
+                            <img src="assets/icons/clock.svg" alt="" style="width:38px; height:38px;">
+                        </div>
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:200px; height:54px; left:calc(50% - 200px/2 + 42px); top:608px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:24px; color:#5C6749;">
+                                Time<br>07:00PM Onwards
+                            </p>
+                        </div>
+
+                        <!-- Event Details Row 3 -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center"
+                            style="width:69px; height:69px; left:calc(50% - 69px/2 - 108.5px); top:690px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); z-index:2;">
+                            <img src="assets/icons/dinner.svg" alt="" style="width:38px; height:28px;">
+                        </div>
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:200px; height:27px; left:calc(50% - 200px/2 + 42px); top:711px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:24px; color:#5C6749;">
+                                Dinner to Follow
+                            </p>
+                        </div>
+
+                        <!-- View Location Button -->
+                        <a href="https://maps.app.goo.gl/yA6dHcQhhFL7MUf69"
+                            class="absolute anim-fade-up flex items-center justify-center rounded-full transition-transform hover:scale-105"
+                            style="width:252px; height:46px; left:calc(50% - 252px/2); top:780px; background:linear-gradient(180deg, #79816B 0%, #55633B 100%); text-decoration:none; z-index:2; gap:10px;">
+                            <img src="assets/icons/location.svg" alt=""
+                                style="width:18px; height:22px; filter:brightness(0) invert(1);">
+                            <span class="font-cambria m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:26px; color:#FFFFFF;">
+                                View Location
+                            </span>
+                        </a>
+
+                        <!-- Side Flower Mid-Right -->
+                        <div class="absolute anim-slide-right pointer-events-none flex items-start"
+                            style="width:180px; right:-5px; top:760px; z-index:3;">
+                            <img src="assets/flowers/flower-mid.png" alt="" class="w-full h-auto block anim-float">
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ================================ -->
+                <!-- NIKAH CARD                       -->
+                <!-- ================================ -->
+                <div id="nikahSection" class="relative w-full flex flex-col items-center anim-fade-up"
+                    style="margin-top:40px;">
+                    <!-- Side Flower Mid-Right -->
+                    <img src="assets/flowers/flower-mid.png" alt=""
+                        class="absolute anim-slide-right pointer-events-none"
+                        style="width:170px; height:344px; right:-50px; top:120px; transform:rotate(-21deg); z-index:3;">
+
+                    <!-- Nikah Icon Circle -->
+                    <div class="rounded-full flex items-center justify-center"
+                        style="width:100px; height:100px; background:#F4E4CE; z-index:2;">
+                        <img src="assets/icons/ring.svg" alt="Nikah" style="width:41px; height:51px;">
+                    </div>
+
+                    <!-- Nikah Card -->
+                    <div class="rounded-25 border flex flex-col items-center relative overflow-hidden"
+                        style="width:396px; max-width:92vw; background:#FFF7ED; border-color:#A0A793; box-shadow:0px 0px 4px rgba(0,0,0,0.25); margin-top:-24px; padding:60px 16px 28px;">
+
+                        <!-- Nikah Card BG -->
+                        <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
+                            style="background-image:url('assets/bg/Nikah Card BG.png');"></div>
+
+                        <div class="relative z-10 flex flex-col items-center w-full">
                             <!-- Title -->
                             <h3 class="font-cardo text-center" style="font-size:55px; line-height:74px; color:#2F3B1A;">
-                                Mehendi<br>Evening
+                                Nikah<br>Ceremony
                             </h3>
 
                             <!-- Subtitle -->
                             <p class="font-rufina text-center"
                                 style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:12px;">
-                                An evening filled with colors<br>and celebration
+                                A sacred union, blessed with<br>faith and love.
                             </p>
 
                             <!-- Divider -->
@@ -243,7 +354,6 @@
 
                             <!-- Info Rows -->
                             <div class="flex flex-col w-full" style="padding:16px 20px 0;">
-
                                 <!-- Date -->
                                 <div class="flex items-center" style="gap:14px;">
                                     <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
@@ -252,7 +362,7 @@
                                             style="width:32px; height:32px;">
                                     </div>
                                     <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        Friday, 23 May 2026
+                                        Sunday, 25 May 2026
                                     </p>
                                 </div>
 
@@ -263,7 +373,7 @@
                                         <img src="assets/icons/clock.svg" alt="Time" style="width:38px; height:38px;">
                                     </div>
                                     <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        Time 07:00PM Onwards
+                                        After Namaz-e-Magrib
                                     </p>
                                 </div>
 
@@ -280,308 +390,211 @@
                                 </div>
                             </div>
 
-                            <!-- View Location Button -->
-                            <a href="#"
-                                class="btn-location flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                                style="width:252px; height:46px; margin-top:24px; gap:10px;">
-                                <img src="assets/icons/location.svg" alt=""
-                                    style="width:18px; height:22px; filter:brightness(0) invert(1);">
-                                <span class="font-cambria text-white" style="font-size:22px; line-height:26px;">View
-                                    Location</span>
-                            </a>
+                            <!-- Venue Sub-card -->
+                            <div class="rounded-xl flex flex-col items-center venue-shadow relative"
+                                style="width:358px; max-width:88vw; background:#FAF0E2; margin-top:28px; padding-top:42px; padding-bottom:16px;">
+                                <!-- Location Icon -->
+                                <div class="rounded-full flex items-center justify-center icon-circle absolute"
+                                    style="width:69px; height:69px; top:-34px;">
+                                    <img src="assets/icons/location-nikah.svg" alt="Location"
+                                        style="width:30px; height:37px;">
+                                </div>
+
+                                <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
+                                    Venue</p>
+                                <h4 class="font-rufina text-center"
+                                    style="font-size:30px; line-height:37px; color:#2F3B1A; margin-top:4px;">The
+                                    Grant Taj</h4>
+                                <p class="font-rufina"
+                                    style="font-size:20px; line-height:25px; color:#475037; margin-top:4px;">Grant
+                                    Road, Mumbai</p>
+
+                                <!-- Small View Location -->
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105"
+                                    style="background:#475037; width:194px; height:29px; margin-top:10px; gap:6px;">
+                                    <img src="assets/icons/location.svg" alt=""
+                                        style="width:14px; height:17px; filter:brightness(0) invert(1);">
+                                    <span class="font-cambria text-white" style="font-size:18px; line-height:21px;">View
+                                        Location</span>
+                                </a>
+                            </div>
+
+                            <!-- Meaningful message -->
+                            <p class="font-rufina text-center"
+                                style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:24px;">
+                                This moment marks the beginning of a new journey,
+                                and your presence will make it even more meaningful.
+                            </p>
                         </div>
                     </div>
+                </div>
 
 
-                    <!-- ================================ -->
-                    <!-- NIKAH CARD                       -->
-                    <!-- ================================ -->
-                    <div id="nikahSection" class="relative w-full flex flex-col items-center anim-fade-up"
-                        style="margin-top:40px;">
-                        <!-- Side Flower Mid-Right -->
-                        <img src="assets/flowers/flower-mid.png" alt=""
-                            class="absolute anim-slide-right pointer-events-none"
-                            style="width:170px; height:344px; right:-50px; top:120px; transform:rotate(-21deg); z-index:3;">
+                <!-- ================================ -->
+                <!-- RECEPTION CARD                   -->
+                <!-- ================================ -->
+                <div id="receptionSection" class="relative w-full flex flex-col items-center anim-fade-up"
+                    style="margin-top:40px;">
+                    <!-- Side Flower Small-Left -->
+                    <img src="assets/flowers/flower-small.png" alt=""
+                        class="absolute anim-slide-left pointer-events-none"
+                        style="width:234px; height:243px; left:-80px; top:0; transform:scaleX(-1); z-index:3;">
 
-                        <!-- Nikah Icon Circle -->
-                        <div class="rounded-full flex items-center justify-center"
-                            style="width:100px; height:100px; background:#F4E4CE; z-index:2;">
-                            <img src="assets/icons/ring.svg" alt="Nikah" style="width:41px; height:51px;">
+                    <!-- Reception Icon Circle -->
+                    <div class="rounded-full flex items-center justify-center"
+                        style="width:100px; height:100px; background:#F4E4CE; z-index:2;">
+                        <img src="assets/icons/reception.svg" alt="Reception" style="width:74px; height:50px;">
+                    </div>
+
+                    <!-- Reception Card -->
+                    <div class="rounded-25 border flex flex-col items-center"
+                        style="width:396px; max-width:92vw; background:#FFF7ED; border-color:#A0A793; box-shadow:0px 0px 4px rgba(0,0,0,0.25); margin-top:-24px; padding:60px 16px 28px;">
+
+                        <!-- Title -->
+                        <h3 class="font-carattere text-center" style="font-size:75px; line-height:74px; color:#625125;">
+                            Reception
+                        </h3>
+
+                        <!-- Subtitle -->
+                        <p class="font-rufina text-center"
+                            style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:16px;">
+                            An evening filled with joy,<br>celebration, and shared happiness.
+                        </p>
+
+                        <!-- Divider -->
+                        <div
+                            style="width:334px; max-width:85vw; height:0; border-top:1px solid #475037; margin-top:18px;">
                         </div>
 
-                        <!-- Nikah Card -->
-                        <div class="rounded-25 border flex flex-col items-center relative overflow-hidden"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; border-color:#A0A793; box-shadow:0px 0px 4px rgba(0,0,0,0.25); margin-top:-24px; padding:60px 16px 28px;">
-
-                            <!-- Nikah Card BG -->
-                            <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
-                                style="background-image:url('assets/bg/Nikah Card BG.png');"></div>
-
-                            <div class="relative z-10 flex flex-col items-center w-full">
-                                <!-- Title -->
-                                <h3 class="font-cardo text-center"
-                                    style="font-size:55px; line-height:74px; color:#2F3B1A;">
-                                    Nikah<br>Ceremony
-                                </h3>
-
-                                <!-- Subtitle -->
-                                <p class="font-rufina text-center"
-                                    style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:12px;">
-                                    A sacred union, blessed with<br>faith and love.
+                        <!-- Info Rows -->
+                        <div class="flex flex-col w-full" style="padding:16px 20px 0;">
+                            <!-- Date -->
+                            <div class="flex items-center" style="gap:14px;">
+                                <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
+                                    style="width:69px; height:69px;">
+                                    <img src="assets/icons/Calendar.svg" alt="Date" style="width:32px; height:32px;">
+                                </div>
+                                <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
+                                    Friday, 23 May 2026
                                 </p>
+                            </div>
 
-                                <!-- Divider -->
-                                <div
-                                    style="width:334px; max-width:85vw; height:0; border-top:1px solid #475037; margin-top:18px;">
+                            <!-- Time -->
+                            <div class="flex items-center" style="gap:14px; margin-top:8px;">
+                                <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
+                                    style="width:69px; height:69px;">
+                                    <img src="assets/icons/clock.svg" alt="Time" style="width:38px; height:38px;">
                                 </div>
+                                <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
+                                    Time 07:00PM Onwards
+                                </p>
+                            </div>
 
-                                <!-- Info Rows -->
-                                <div class="flex flex-col w-full" style="padding:16px 20px 0;">
-                                    <!-- Date -->
-                                    <div class="flex items-center" style="gap:14px;">
-                                        <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                            style="width:69px; height:69px;">
-                                            <img src="assets/icons/Calendar.svg" alt="Date"
-                                                style="width:32px; height:32px;">
-                                        </div>
-                                        <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                            Sunday, 25 May 2026
-                                        </p>
-                                    </div>
-
-                                    <!-- Time -->
-                                    <div class="flex items-center" style="gap:14px; margin-top:8px;">
-                                        <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                            style="width:69px; height:69px;">
-                                            <img src="assets/icons/clock.svg" alt="Time"
-                                                style="width:38px; height:38px;">
-                                        </div>
-                                        <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                            After Namaz-e-Magrib
-                                        </p>
-                                    </div>
-
-                                    <!-- Dinner -->
-                                    <div class="flex items-center" style="gap:14px; margin-top:8px;">
-                                        <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                            style="width:69px; height:69px;">
-                                            <img src="assets/icons/dinner.svg" alt="Dinner"
-                                                style="width:38px; height:28px;">
-                                        </div>
-                                        <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                            Dinner to Follow
-                                        </p>
-                                    </div>
+                            <!-- Dinner -->
+                            <div class="flex items-center" style="gap:14px; margin-top:8px;">
+                                <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
+                                    style="width:69px; height:69px;">
+                                    <img src="assets/icons/dinner.svg" alt="Dinner" style="width:38px; height:28px;">
                                 </div>
-
-                                <!-- Venue Sub-card -->
-                                <div class="rounded-xl flex flex-col items-center venue-shadow relative"
-                                    style="width:358px; max-width:88vw; background:#FAF0E2; margin-top:28px; padding-top:42px; padding-bottom:16px;">
-                                    <!-- Location Icon -->
-                                    <div class="rounded-full flex items-center justify-center icon-circle absolute"
-                                        style="width:69px; height:69px; top:-34px;">
-                                        <img src="assets/icons/location-nikah.svg" alt="Location"
-                                            style="width:30px; height:37px;">
-                                    </div>
-
-                                    <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        Venue</p>
-                                    <h4 class="font-rufina text-center"
-                                        style="font-size:30px; line-height:37px; color:#2F3B1A; margin-top:4px;">The
-                                        Grant Taj</h4>
-                                    <p class="font-rufina"
-                                        style="font-size:20px; line-height:25px; color:#475037; margin-top:4px;">Grant
-                                        Road, Mumbai</p>
-
-                                    <!-- Small View Location -->
-                                    <a href="#"
-                                        class="flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105"
-                                        style="background:#475037; width:194px; height:29px; margin-top:10px; gap:6px;">
-                                        <img src="assets/icons/location.svg" alt=""
-                                            style="width:14px; height:17px; filter:brightness(0) invert(1);">
-                                        <span class="font-cambria text-white"
-                                            style="font-size:18px; line-height:21px;">View Location</span>
-                                    </a>
-                                </div>
-
-                                <!-- Meaningful message -->
-                                <p class="font-rufina text-center"
-                                    style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:24px;">
-                                    This moment marks the beginning of a new journey,
-                                    and your presence will make it even more meaningful.
+                                <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
+                                    An Elegant Dinner Awaits
                                 </p>
                             </div>
                         </div>
+
+                        <!-- View Location Button -->
+                        <a href="#"
+                            class="btn-location flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                            style="width:252px; height:46px; margin-top:24px; gap:10px;">
+                            <img src="assets/icons/location.svg" alt=""
+                                style="width:18px; height:22px; filter:brightness(0) invert(1);">
+                            <span class="font-cambria text-white" style="font-size:22px; line-height:26px;">View
+                                Location</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- ================================ -->
+                <!-- GIFT SUGGESTION                  -->
+                <!-- ================================ -->
+                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:50px;">
+                    <!-- Side Flower Long-Right -->
+                    <img src="assets/flowers/flower-long.png" alt=""
+                        class="absolute anim-slide-right pointer-events-none"
+                        style="width:200px; height:445px; right:-60px; top:-40px; z-index:3;">
+
+                    <!-- Gift Icon -->
+                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
+                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
+                        <img src="assets/icons/gift.svg" alt="Gift" style="width:50px; height:54px;">
                     </div>
 
+                    <!-- Gift Card -->
+                    <div class="rounded-25 flex flex-col items-center card-shadow"
+                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
+                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
+                            Gift Suggestion
+                        </h4>
+                        <p class="font-rufina text-center"
+                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:297px; margin-top:8px;">
+                            Your presence is the greatest gift to us. However, if you wish to bless the couple
+                            further, we would truly appreciate your kind gesture.
+                        </p>
+                    </div>
+                </div>
 
-                    <!-- ================================ -->
-                    <!-- RECEPTION CARD                   -->
-                    <!-- ================================ -->
-                    <div id="receptionSection" class="relative w-full flex flex-col items-center anim-fade-up"
-                        style="margin-top:40px;">
-                        <!-- Side Flower Small-Left -->
-                        <img src="assets/flowers/flower-small.png" alt=""
-                            class="absolute anim-slide-left pointer-events-none"
-                            style="width:234px; height:243px; left:-80px; top:0; transform:scaleX(-1); z-index:3;">
 
-                        <!-- Reception Icon Circle -->
-                        <div class="rounded-full flex items-center justify-center"
-                            style="width:100px; height:100px; background:#F4E4CE; z-index:2;">
-                            <img src="assets/icons/reception.svg" alt="Reception" style="width:74px; height:50px;">
-                        </div>
-
-                        <!-- Reception Card -->
-                        <div class="rounded-25 border flex flex-col items-center"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; border-color:#A0A793; box-shadow:0px 0px 4px rgba(0,0,0,0.25); margin-top:-24px; padding:60px 16px 28px;">
-
-                            <!-- Title -->
-                            <h3 class="font-carattere text-center"
-                                style="font-size:75px; line-height:74px; color:#625125;">
-                                Reception
-                            </h3>
-
-                            <!-- Subtitle -->
-                            <p class="font-rufina text-center"
-                                style="font-size:22px; line-height:27px; color:#5C6749; max-width:308px; margin-top:16px;">
-                                An evening filled with joy,<br>celebration, and shared happiness.
-                            </p>
-
-                            <!-- Divider -->
-                            <div
-                                style="width:334px; max-width:85vw; height:0; border-top:1px solid #475037; margin-top:18px;">
-                            </div>
-
-                            <!-- Info Rows -->
-                            <div class="flex flex-col w-full" style="padding:16px 20px 0;">
-                                <!-- Date -->
-                                <div class="flex items-center" style="gap:14px;">
-                                    <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                        style="width:69px; height:69px;">
-                                        <img src="assets/icons/Calendar.svg" alt="Date"
-                                            style="width:32px; height:32px;">
-                                    </div>
-                                    <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        Friday, 23 May 2026
-                                    </p>
-                                </div>
-
-                                <!-- Time -->
-                                <div class="flex items-center" style="gap:14px; margin-top:8px;">
-                                    <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                        style="width:69px; height:69px;">
-                                        <img src="assets/icons/clock.svg" alt="Time" style="width:38px; height:38px;">
-                                    </div>
-                                    <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        Time 07:00PM Onwards
-                                    </p>
-                                </div>
-
-                                <!-- Dinner -->
-                                <div class="flex items-center" style="gap:14px; margin-top:8px;">
-                                    <div class="rounded-full flex items-center justify-center icon-circle shrink-0"
-                                        style="width:69px; height:69px;">
-                                        <img src="assets/icons/dinner.svg" alt="Dinner"
-                                            style="width:38px; height:28px;">
-                                    </div>
-                                    <p class="font-rufina" style="font-size:22px; line-height:27px; color:#5C6749;">
-                                        An Elegant Dinner Awaits
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- View Location Button -->
-                            <a href="#"
-                                class="btn-location flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                                style="width:252px; height:46px; margin-top:24px; gap:10px;">
-                                <img src="assets/icons/location.svg" alt=""
-                                    style="width:18px; height:22px; filter:brightness(0) invert(1);">
-                                <span class="font-cambria text-white" style="font-size:22px; line-height:26px;">View
-                                    Location</span>
-                            </a>
-                        </div>
+                <!-- ================================ -->
+                <!-- NOTE                             -->
+                <!-- ================================ -->
+                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
+                    <!-- Note Icon -->
+                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
+                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
+                        <img src="assets/icons/notice.svg" alt="Note" style="width:59px; height:51px;">
                     </div>
 
+                    <!-- Note Card -->
+                    <div class="rounded-25 flex flex-col items-center card-shadow"
+                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
+                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
+                            Note
+                        </h4>
+                        <p class="font-rufina text-center"
+                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
+                            To ensure a smooth and pleasant experience for all our guests,
+                            we request parents to kindly keep children supervised and avoid
+                            any disruptive behavior during the event.
+                        </p>
+                    </div>
+                </div>
 
-                    <!-- ================================ -->
-                    <!-- GIFT SUGGESTION                  -->
-                    <!-- ================================ -->
-                    <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:50px;">
-                        <!-- Side Flower Long-Right -->
-                        <img src="assets/flowers/flower-long.png" alt=""
-                            class="absolute anim-slide-right pointer-events-none"
-                            style="width:200px; height:445px; right:-60px; top:-40px; z-index:3;">
 
-                        <!-- Gift Icon -->
-                        <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                            style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                            <img src="assets/icons/gift.svg" alt="Gift" style="width:50px; height:54px;">
-                        </div>
-
-                        <!-- Gift Card -->
-                        <div class="rounded-25 flex flex-col items-center card-shadow"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                            <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                                Gift Suggestion
-                            </h4>
-                            <p class="font-rufina text-center"
-                                style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:297px; margin-top:8px;">
-                                Your presence is the greatest gift to us. However, if you wish to bless the couple
-                                further, we would truly appreciate your kind gesture.
-                            </p>
-                        </div>
+                <!-- ================================ -->
+                <!-- THANK YOU                        -->
+                <!-- ================================ -->
+                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
+                    <!-- Thank You Icon -->
+                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
+                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
+                        <img src="assets/icons/heart-outline.svg" alt="Thank You" style="width:54px; height:48px;">
                     </div>
 
-
-                    <!-- ================================ -->
-                    <!-- NOTE                             -->
-                    <!-- ================================ -->
-                    <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
-                        <!-- Note Icon -->
-                        <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                            style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                            <img src="assets/icons/notice.svg" alt="Note" style="width:59px; height:51px;">
-                        </div>
-
-                        <!-- Note Card -->
-                        <div class="rounded-25 flex flex-col items-center card-shadow"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                            <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                                Note
-                            </h4>
-                            <p class="font-rufina text-center"
-                                style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
-                                To ensure a smooth and pleasant experience for all our guests,
-                                we request parents to kindly keep children supervised and avoid
-                                any disruptive behavior during the event.
-                            </p>
-                        </div>
+                    <!-- Thank You Card -->
+                    <div class="rounded-25 flex flex-col items-center card-shadow"
+                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
+                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
+                            Thank You
+                        </h4>
+                        <p class="font-rufina text-center"
+                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
+                            We look forward to celebrating this beautiful occasion with you.
+                            Your presence will truly mean a lot to us.
+                        </p>
                     </div>
-
-
-                    <!-- ================================ -->
-                    <!-- THANK YOU                        -->
-                    <!-- ================================ -->
-                    <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
-                        <!-- Thank You Icon -->
-                        <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                            style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                            <img src="assets/icons/heart-outline.svg" alt="Thank You" style="width:54px; height:48px;">
-                        </div>
-
-                        <!-- Thank You Card -->
-                        <div class="rounded-25 flex flex-col items-center card-shadow"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                            <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                                Thank You
-                            </h4>
-                            <p class="font-rufina text-center"
-                                style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
-                                We look forward to celebrating this beautiful occasion with you.
-                                Your presence will truly mean a lot to us.
-                            </p>
-                        </div>
-                    </div>
+                </div>
 
                 </section>
 
