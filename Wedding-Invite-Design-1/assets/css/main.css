@@ -121,6 +121,37 @@ html * {
     transform: translateX(0);
 }
 
+.visible .anim-float {
+    animation: float-up-down 3.5s ease-in-out infinite;
+}
+@keyframes float-up-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Breakdown Line Edge Dots */
+.line-dot {
+    position: relative;
+    overflow: visible !important;
+}
+.line-dot::before, .line-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 4px;
+    height: 4px;
+}
+.line-dot-dark::before, .line-dot-dark::after {
+    background: #475037;
+}
+.line-dot-light::before, .line-dot-light::after {
+    background: rgba(30, 30, 30, 0.5);
+}
+.line-dot::before { left: -2px; }
+.line-dot::after { right: -2px; }
+
+
 /* Smooth scroll on main invitation */
 .main-invitation {
     scroll-behavior: smooth;
