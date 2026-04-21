@@ -542,7 +542,7 @@
 
                         <!-- Flower Long Bottom-Right -->
                         <div class="absolute anim-slide-right pointer-events-none flex items-start"
-                            style="width:200px; right:0px; top:730px; z-index:3;">
+                            style="width:150px; right:0px; top:730px; z-index:3;">
                             <img src="assets/flowers/flower-long.png" alt="Flower"
                                 class="w-full h-auto block anim-float">
                         </div>
@@ -552,158 +552,200 @@
 
 
                 <!-- ================================ -->
-                <!-- GIFT SUGGESTION                  -->
+                <!-- UNIFIED FOOTER SECTION           -->
                 <!-- ================================ -->
-                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:50px;">
+                <section id="footerSection" class="relative w-full overflow-visible"
+                    style="margin-top:-130px; z-index:5; position:relative;">
+                    <div id="footerInner" class="relative"
+                        style="width:428px; height:1370px; transform-origin:top left;">
 
-                    <!-- Gift Icon -->
-                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                        <img src="assets/icons/gift.svg" alt="Gift" style="width:50px; height:54px;">
-                    </div>
+                        <!-- ================= GIFT SUGGESTION ================= -->
+                        <!-- Gift Circle -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center info-circle-shadow"
+                            style="width:104px; height:104px; left:calc(50% - 104px/2 - 1px); top:60px; background:#EFE8DF; box-shadow:0px 0px 8.3px rgba(0,0,0,0.31); z-index:2;">
+                            <img src="assets/icons/gift.svg" alt="gift" style="width:50px; height:54px;">
+                        </div>
 
-                    <!-- Gift Card -->
-                    <div class="rounded-25 flex flex-col items-center card-shadow"
-                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                            Gift Suggestion
-                        </h4>
-                        <p class="font-rufina text-center"
-                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:297px; margin-top:8px;">
-                            Your presence is the greatest gift to us. However, if you wish to bless the couple
-                            further, we would truly appreciate your kind gesture.
-                        </p>
-                    </div>
-                </div>
+                        <!-- Gift Card Box -->
+                        <div class="absolute anim-fade-up border-box card-shadow"
+                            style="width:396px; height:209px; left:calc(50% - 396px/2 - 1px); top:112px; background:#FFF7ED; box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25); border-radius:25px; z-index:1;">
+                        </div>
 
+                        <!-- Gift Title -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:234px; height:43px; left:calc(50% - 234px/2 - 2px); top:174px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#475037;">Gift
+                                Suggestion</h4>
+                        </div>
 
-                <!-- ================================ -->
-                <!-- NOTE                             -->
-                <!-- ================================ -->
-                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
-                    <!-- Note Icon -->
-                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                        <img src="assets/icons/notice.svg" alt="Note" style="width:59px; height:51px;">
-                    </div>
-
-                    <!-- Note Card -->
-                    <div class="rounded-25 flex flex-col items-center card-shadow"
-                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                            Note
-                        </h4>
-                        <p class="font-rufina text-center"
-                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
-                            To ensure a smooth and pleasant experience for all our guests,
-                            we request parents to kindly keep children supervised and avoid
-                            any disruptive behavior during the event.
-                        </p>
-                    </div>
-                </div>
-
-
-                <!-- ================================ -->
-                <!-- THANK YOU                        -->
-                <!-- ================================ -->
-                <div class="relative w-full flex flex-col items-center anim-fade-up" style="margin-top:40px;">
-                    <!-- Thank You Icon -->
-                    <div class="rounded-full flex items-center justify-center info-circle-shadow"
-                        style="width:104px; height:104px; background:#EFE8DF; z-index:2;">
-                        <img src="assets/icons/heart-outline.svg" alt="Thank You" style="width:54px; height:48px;">
-                    </div>
-
-                    <!-- Thank You Card -->
-                    <div class="rounded-25 flex flex-col items-center card-shadow"
-                        style="width:396px; max-width:92vw; background:#FFF7ED; margin-top:-24px; padding:54px 16px 24px;">
-                        <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                            Thank You
-                        </h4>
-                        <p class="font-rufina text-center"
-                            style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:8px;">
-                            We look forward to celebrating this beautiful occasion with you.
-                            Your presence will truly mean a lot to us.
-                        </p>
-                    </div>
-                </div>
-
-                </section>
-
-
-                <!-- ================================ -->
-                <!-- FOOTER AREA                      -->
-                <!-- ================================ -->
-                <section class="w-full relative" style="margin-top:40px;">
-                    <!-- Footer BG Image -->
-                    <img src="assets/bg/Footer bg.png" alt=""
-                        class="absolute bottom-0 left-0 w-full object-cover object-bottom pointer-events-none"
-                        style="height:730px; max-height:100%;">
-
-                    <div class="relative z-10 flex flex-col items-center w-full"
-                        style="padding-top:20px; padding-bottom:40px;">
-
-                        <!-- Awaiting to Welcome You Card -->
-                        <div class="rounded-25 flex flex-col items-center card-shadow anim-fade-up"
-                            style="width:396px; max-width:92vw; background:#FFF7ED; padding:20px 16px 20px;">
-                            <h4 class="font-prata text-center" style="font-size:32px; line-height:43px; color:#475037;">
-                                Awaiting to<br>Welcome You
-                            </h4>
-
-                            <!-- Divider -->
-                            <div
-                                style="width:334px; max-width:85vw; height:0; border-top:1px solid #475037; margin-top:12px;">
-                            </div>
-
-                            <p class="font-rufina text-center"
-                                style="font-size:18px; line-height:22px; color:#2F3B1A; max-width:371px; margin-top:14px;">
-                                Looking forward to welcoming you<br>
-                                to this beautiful celebration.
-                            </p>
-
-                            <p class="font-rufina font-bold text-center"
-                                style="font-size:18px; line-height:22px; color:#475037; margin-top:14px;">
-                                With best compliments from the family
+                        <!-- Gift Text -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:297px; height:87px; left:calc(50% - 297px/2 - 1.5px); top:220px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#2F3B1A;">
+                                Your presence is the greatest gift to<br>
+                                us. However, if you wish to bless<br>
+                                the couple further, we would truly<br>
+                                appreciate your kind gesture.
                             </p>
                         </div>
 
-                        <!-- WhatsApp Button -->
-                        <a href="#"
-                            class="btn-whatsapp flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105 anim-fade-up"
-                            style="width:398px; max-width:92vw; height:45px; margin-top:24px;">
-                            <span class="font-rufina text-white" style="font-size:20px; line-height:25px;">Connect with
+
+                        <!-- ================= NOTE ================= -->
+                        <!-- Note Circle -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center info-circle-shadow"
+                            style="width:104px; height:104px; left:calc(50% - 104px/2 - 1px); top:340px; background:#EFE8DF; box-shadow:0px 0px 8.3px rgba(0,0,0,0.31); z-index:2;">
+                            <img src="assets/icons/notice.svg" alt="notice" style="width:59px; height:51px;">
+                        </div>
+
+                        <!-- Note Card Box -->
+                        <div class="absolute anim-fade-up border-box card-shadow"
+                            style="width:396px; height:240px; left:calc(50% - 396px/2 - 1px); top:392px; background:#FFF7ED; box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25); border-radius:25px; z-index:1;">
+                        </div>
+
+                        <!-- Note Title -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:74px; height:43px; left:calc(50% - 74px/2 - 2px); top:454px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#475037;">Note</h4>
+                        </div>
+
+                        <!-- Note Text -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:371px; height:119px; left:calc(50% - 371px/2 - 1.5px); top:500px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#2F3B1A;">
+                                To ensure a smooth and pleasant<br>
+                                experience for all our guests,<br>
+                                we request parents to kindly keep children<br>
+                                supervised and avoid any disruptive<br>
+                                behavior during the event.
+                            </p>
+                        </div>
+
+
+                        <!-- ================= THANK YOU ================= -->
+                        <!-- Thank You Circle -->
+                        <div class="absolute anim-fade-up rounded-full flex items-center justify-center info-circle-shadow"
+                            style="width:104px; height:104px; left:calc(50% - 104px/2); top:651px; background:#EFE8DF; box-shadow:0px 0px 8.3px rgba(0,0,0,0.31); z-index:2;">
+                            <img src="assets/icons/heart-outline.svg" alt="heart" style="width:54px; height:48px;">
+                        </div>
+
+                        <!-- Thank You Card Box -->
+                        <div class="absolute anim-fade-up border-box card-shadow"
+                            style="width:396px; height:199px; left:calc(50% - 396px/2); top:703px; background:#FFF7ED; box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25); border-radius:25px; z-index:1;">
+                        </div>
+
+                        <!-- Thank You Title -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:165px; height:43px; left:calc(50% - 165px/2 - 0.5px); top:765px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#475037;">Thank You</h4>
+                        </div>
+
+                        <!-- Thank You Text -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:371px; height:68px; left:calc(50% - 371px/2 - 0.5px); top:811px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#2F3B1A;">
+                                We look forward to celebrating this<br>
+                                beautiful occasion with you.<br>
+                                Your presence will truly mean a lot to us.
+                            </p>
+                        </div>
+
+
+                        <!-- ================= BOTTOM FOOTER BLOCK ================= -->
+                        <!-- Footer BG spanning behind WhatsApp, credits and nav -->
+                        <div class="absolute border-box overflow-hidden pointer-events-none"
+                            style="width:428px; height:465px; left:0; top:920px; z-index:0;">
+                            <img src="assets/bg/Footer bg.png" alt="footer bg" class="absolute bottom-0 left-0 w-full"
+                                style="object-fit:cover; object-position:bottom;">
+                        </div>
+
+                        <!-- Awaiting Card Box -->
+                        <div class="absolute anim-fade-up border-box card-shadow"
+                            style="width:396px; height:225px; left:calc(50% - 396px/2 - 1px); top:922px; background:#FFF7ED; box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25); border-radius:25px; z-index:2;">
+
+                            <!-- Awaiting Title -->
+                            <div class="absolute flex items-center justify-center text-center"
+                                style="width:210px; height:86px; left:calc(50% - 210px/2 - 1px); top:20px;">
+                                <h4 class="font-prata m-0 p-0"
+                                    style="font-weight:400; font-size:32px; line-height:43px; color:#475037;">Awaiting
+                                    to Welcome You</h4>
+                            </div>
+
+                            <!-- Line -->
+                            <div class="absolute line-dot line-dot-dark"
+                                style="width:334px; height:0px; left:calc(50% - 334px/2); top:119px; border-top:1px solid #475037;">
+                            </div>
+
+                            <!-- Awaiting Text -->
+                            <div class="absolute flex items-center justify-center text-center"
+                                style="width:371px; height:43px; left:calc(50% - 371px/2 - 0.5px); top:134px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:18px; line-height:22px; color:#2F3B1A;">
+                                    Looking forward to welcoming you<br>to this beautiful celebration.
+                                </p>
+                            </div>
+
+                            <!-- Awaiting Compliments Text -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:100%; height:22px; left:0; top:187px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:700; font-size:18px; line-height:22px; color:#475037;">
+                                    With best compliments from the family
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Connect with Us on WhatsApp Button -->
+                        <a href="https://wa.me/something"
+                            class="absolute flex items-center justify-center transition-transform hover:scale-105 anim-fade-up"
+                            style="width:398px; height:45px; left:calc(50% - 398px/2); top:1171px; background:linear-gradient(180deg, #AEA386 0%, #949083 100%); border:1px solid #A89B79; box-shadow:0px 4px 4px rgba(75, 60, 22, 0.48); border-radius:100px; text-decoration:none; z-index:2;">
+                            <span class="font-rufina m-0 p-0 mb-1"
+                                style="font-weight:400; font-size:20px; line-height:25px; color:#FFFFFF;">Connect with
                                 Us on WhatsApp</span>
                         </a>
 
-                        <!-- Credits -->
-                        <p class="font-rufina text-center"
-                            style="font-size:15px; line-height:19px; color:#625125; margin-top:18px;">
-                            Crafted by Eaz Nexora
-                        </p>
+                        <!-- Crafted by Text -->
+                        <div class="absolute flex items-center justify-center text-center anim-fade-up"
+                            style="width:250px; height:19px; left:calc(50% - 250px/2); top:1241px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:15px; line-height:19px; color:#625125;">
+                                Crafted by <a href="https://www.eaznexora.com" target="_blank"
+                                    style="color:#B69D74; text-decoration:none; font-weight:700;">Eaz Nexora</a>
+                            </p>
+                        </div>
 
-                        <!-- Navigation Bar (in-flow at footer position) -->
-                        <nav id="footerNav" class="flex items-center justify-center rounded-full nav-pill-shadow"
-                            style="width:193px; height:61px; background:#FFFBF4; margin-top:20px;">
-                            <div class="flex items-center justify-between"
-                                style="width:183px; height:51px; padding:0 4px;">
+                        <!-- Bottom Nav (Frame 19) -->
+                        <div class="absolute flex items-center justify-center"
+                            style="width:193px; height:61px; left:calc(50% - 193px/2 - 0.5px); top:1280px; background:#FFFBF4; box-shadow:0px 0px 4px rgba(98, 81, 37, 0.5); border-radius:201px; z-index:5;">
+                            <div class="flex items-center justify-between" style="width:183px; height:51px;">
+                                <!-- Nav 1 -->
                                 <button onclick="scrollToSection('mehendiSection')"
-                                    class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                                    class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none"
                                     style="width:51px; height:51px; background:transparent;">
                                     <img src="assets/icons/mehendi-n.svg" alt="Mehendi"
                                         style="width:51px; height:51px;">
                                 </button>
+                                <!-- Nav 2 (Active context Nikah ring) -->
                                 <button onclick="scrollToSection('nikahSection')"
-                                    class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                                    class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none"
                                     style="width:51px; height:51px; background:transparent;">
                                     <img src="assets/icons/ring-n.svg" alt="Nikah" style="width:51px; height:51px;">
                                 </button>
+                                <!-- Nav 3 -->
                                 <button onclick="scrollToSection('receptionSection')"
-                                    class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                                    class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none"
                                     style="width:51px; height:51px; background:transparent;">
                                     <img src="assets/icons/reception-n.svg" alt="Reception"
                                         style="width:51px; height:51px;">
                                 </button>
                             </div>
-                        </nav>
+                        </div>
+
                     </div>
                 </section>
 
