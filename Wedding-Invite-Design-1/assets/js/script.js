@@ -13,6 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
             glitterContainer.appendChild(sparkle);
         }
     }
+
+    // ============================================
+    // CONTENT PROTECTION
+    // Disable right-click, image drag, long-press save
+    // ============================================
+
+    // Block right-click context menu
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Block image dragging
+    document.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+
+    // Block long-press on mobile (touch hold to save image)
+    document.addEventListener('touchstart', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.target.style.pointerEvents = 'none';
+            setTimeout(() => { e.target.style.pointerEvents = ''; }, 500);
+        }
+    }, { passive: true });
+
+    // Disable text selection site-wide
+    document.body.style.userSelect = 'none';
+    document.body.style.webkitUserSelect = 'none';
 });
 
 
