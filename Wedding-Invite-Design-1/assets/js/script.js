@@ -73,7 +73,8 @@ function scaleSections() {
         { innerId: 'heroInner', sectionId: 'heroSection', designHeight: 944 },      // 930 hero + 14 gold bar
         { innerId: 'mehendiInner', sectionId: 'mehendiSection', designHeight: 890 },// Expanded bounding box
         { innerId: 'nikahInner', sectionId: 'nikahSection', designHeight: 1060 },   // Full Nikah layout box
-        { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 880 } // Responsive Reception box
+        { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 880 }, // Responsive Reception box
+        { innerId: 'footerInner', sectionId: 'footerSection', designHeight: 1370 }  // Matches HTML canvas exactly
     ];
 
     sectionsToScale.forEach((sec) => {
