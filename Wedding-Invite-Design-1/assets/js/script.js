@@ -56,33 +56,41 @@ function openInvitation() {
 
 
 // ============================================
-// HERO SECTION SCALING (Pixel-perfect on all devices)
+// SECTION SCALING (Pixel-perfect on all devices)
 // ============================================
-function scaleHero() {
+function scaleSections() {
     const container = document.getElementById('invitationContent');
-    const heroInner = document.getElementById('heroInner');
-    const heroSection = document.getElementById('heroSection');
-    if (!container || !heroInner || !heroSection) return;
+    if (!container) return;
 
     const containerWidth = container.clientWidth;
     const designWidth = 428;
-    const designHeight = 944; // 930 hero + 14 gold bar
     const scale = Math.min(1, containerWidth / designWidth);
-
-    // Scale from top-left, then offset to center horizontally
     const scaledWidth = designWidth * scale;
     const offsetX = (containerWidth - scaledWidth) / 2;
 
-    heroInner.style.transform = `scale(${scale})`;
-    heroInner.style.marginLeft = offsetX + 'px';
+    // List of all sections that need fixed-canvas scaling
+    const sectionsToScale = [
+        { innerId: 'heroInner', sectionId: 'heroSection', designHeight: 944 },      // 930 hero + 14 gold bar
+        { innerId: 'mehendiInner', sectionId: 'mehendiSection', designHeight: 890 } // Expanded bounding box
+    ];
 
-    // Set the outer section height to match the scaled content
-    heroSection.style.height = (designHeight * scale) + 'px';
+    sectionsToScale.forEach((sec) => {
+        const inner = document.getElementById(sec.innerId);
+        const section = document.getElementById(sec.sectionId);
+        if (inner && section) {
+            // Apply scale and horizontal centering offset
+            inner.style.transform = `scale(${scale})`;
+            inner.style.marginLeft = offsetX + 'px';
+            
+            // Set the outer section height to match the scaled content
+            section.style.height = (sec.designHeight * scale) + 'px';
+        }
+    });
 }
 
 // Run on load and resize
-window.addEventListener('resize', scaleHero);
-window.addEventListener('DOMContentLoaded', scaleHero);
+window.addEventListener('resize', scaleSections);
+window.addEventListener('DOMContentLoaded', scaleSections);
 
 
 // ============================================
