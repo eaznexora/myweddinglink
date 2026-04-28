@@ -427,9 +427,16 @@
                         </div>
 
                         <!-- Add to Calendar Button -->
-                        <div class="absolute anim-fade-up flex items-center justify-center"
+                        <div onclick="addToCalendar({
+                            title: 'Fatima & Hamdan - Nikah Ceremony',
+                            description: 'A sacred union, blessed with faith and love.',
+                            location: 'The Grant Taj, Grant Road, Mumbai',
+                            startDate: '20260525T140000Z',
+                            endDate: '20260525T180000Z',
+                            fileName: 'Nikah_Ceremony.ics'
+                        })" class="absolute anim-fade-up flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
                             style="width:181px; height:24px; left:calc(50% - 181px/2 + 0.5px); top:376px; background:#67436B; border-radius:100px; z-index:2;">
-                            <p class="font-rufina m-0 p-0"
+                            <p class="font-rufina m-0 p-0 pointer-events-none"
                                 style="font-weight:400; font-size:16px; line-height:20px; color:#FFFFFF;">
                                 Add to Calendar
                             </p>
