@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>My Wedding Invites - Digital & Shareable</title>
+    <meta name="title" content="My Wedding Invites - Digital & Shareable">
+    <meta name="description"
+        content="Experience your wedding with a smart, digital invite. Features live countdowns, event updates, and shareable designs.">
+    <meta name="keywords"
+        content="Wedding 2026, Wedding Invites, Digital Wedding Invite, Countdown, Eaz Nexora, Printage">
+    <meta name="author" content="Eaz Nexora">
+
+    <!-- WhatsApp / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Wedding Invites - Digital & Shareable">
+    <meta property="og:description"
+        content="Experience your wedding with a smart, digital invite. Features live countdowns, event updates, and shareable designs.">
+    <meta property="og:url" content="https://www.myweddinglink.in/">
+    <meta property="og:image" content="https://www.myweddinglink.in/assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Recommended image size -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Optional but good -->
+    <meta property="og:site_name" content="My Wedding Invites">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.myweddinglink.in/">
+    <meta property="og:title" content="My Wedding Invites - Digital & Shareable">
+    <meta property="og:description"
+        content="Experience your wedding with a smart, digital invite. Features live countdowns, event updates, and shareable designs.">
+    <meta property="og:image" content="assets/images/og-preview.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.myweddinglink.in/">
+    <meta property="twitter:title" content="My Wedding Invites - Digital & Shareable">
+    <meta property="twitter:description"
+        content="Experience your wedding with a smart, digital invite. Features live countdowns, event updates, and shareable designs. Professionally crafted by Eaz Nexora.">
+    <meta property="twitter:image" content="assets/images/og-preview.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Satisfy&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                        satisfy: ['Satisfy', 'cursive']
+                    },
+                    colors: {
+                        brand: { 500: '#C0687E', 600: '#5E2130' },
+                        darkGreen: '#5B212F'
+                    },
+                    backgroundImage: {
+                        'hero-bg': "url('assets/images/BG.png')",
+                        'digital-grad': "linear-gradient(180deg, #C0687E 0%, #773840 100%)",
+                        'body-grad': "linear-gradient(180deg, #FCEFDF 0%, #FFEAD3 100%)"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-body-grad text-black font-sans antialiased overflow-x-hidden">
+
+    <div id="mobileMenu"
+        class="fixed inset-0 bg-[#5E2130] z-[60] transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center">
+        <button id="closeMenuBtn" class="absolute top-6 right-6 text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="flex flex-col gap-8 text-center">
+            <a href="#home" class="text-white text-2xl font-poppins font-medium hover:text-brand-500 transition"
+                onclick="toggleMenu()">Home</a>
+            <a href="#timetable" class="text-white text-2xl font-poppins font-medium hover:text-brand-500 transition"
+                onclick="toggleMenu()">Timetable</a>
+            <a href="#designs" class="text-white text-2xl font-poppins font-medium hover:text-brand-500 transition"
+                onclick="toggleMenu()">Designs</a>
+            <a href="#features" class="text-white text-2xl font-poppins font-medium hover:text-brand-500 transition"
+                onclick="toggleMenu()">Features</a>
+            <a href="#contact" class="text-white text-2xl font-poppins font-medium hover:text-brand-500 transition"
+                onclick="toggleMenu()">Contact</a>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between z-50 bg-[#F3E1CA] shadow-md">
+        <a href="#home" class="flex-shrink-0 z-20"><img src="assets/images/Logo.png" alt="Logo"
+                class="w-10 h-10 object-contain drop-shadow-md"></a>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <h1 class="text-[25px] font-satisfy text-[#5E2130] drop-shadow-sm">My Wedding Invites</h1>
+        </div>
+        <button id="openMenuBtn" class="flex-shrink-0 text-[#5E2130] z-20 p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="home" class="hero-spacer relative w-full bg-hero-bg bg-cover bg-center bg-no-repeat">
+        <div class="absolute inset-0 bg-transparent pointer-events-none"></div>
+
+        <div
+            class="flex flex-col items-center justify-start pt-6 px-8 sm:px-10 pb-12 w-full max-w-4xl mx-auto relative z-10">
+            <div class="w-full max-w-[260px] md:max-w-md mb-6 animate-float">
+                <img src="assets/images/Mockup Floating.png" alt="App Mockup" class="w-full h-auto drop-shadow-2xl">
+            </div>
+            <h2 class="design-heading text-[#773840] mb-3" data-aos="fade-up" data-aos-duration="1000">YOUR
+                WEDDING,<br>ALL IN ONE LINK</h2>
+            <p class="design-subheading text-[#614B4E] mb-8" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">Beautiful wedding invites with<br>all your moments details & love</p>
+            <div class="grid grid-cols-2 gap-3 w-full max-w-sm">
+                <a href="https://wa.me/919326392368?text=Hello%2C%20I%20came%20across%20the%20Digital%20Wedding%20Invite.%20I%20am%20interested%20in%20creating%20a%20similar%20design%20for%20my%20requirements."
+                    class="btn-text w-full py-3 rounded-lg text-white shadow-lg transition-transform hover:scale-[1.02] flex items-center justify-center"
+                    style="background-color: #5E2130;">Make Yours Now</a>
+                <a href="/printage/" target="_blank"
+                    class="btn-text w-full py-3 rounded-lg transition-transform hover:scale-[1.02] flex items-center justify-center"
+                    style="background-color: rgba(255, 255, 255, 0.19); border: 1px solid #5E2130; color: #5E2130;">View
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="timetable" class="bg-white py-12 flex flex-col items-center w-full">
+        <div class="text-center mb-[22px] px-4" data-aos="fade-down" data-aos-duration="800">
+            <h2 class="figma-heading">EVERYTHING YOUR GUESTS NEED</h2>
+            <p class="figma-subheading">All your wedding details in one beautiful link</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-start gap-[15px] overflow-hidden">
+            <div class="figma-card bg-printed shadow-md" data-aos="fade-right" data-aos-duration="1000">
+                <div class="img-pos-printed"><img src="assets/images/Card.png" alt="Printed Card"
+                        style="width: 148px; height: 121px; object-fit: contain;"></div>
+                <div class="spacer-printed"></div>
+                <h3 class="figma-card-title text-printed-title">Printed Invite</h3>
+                <div class="figma-line border-printed"></div>
+                <ul class="figma-list-text text-list-black list-disc pl-4 space-y-0">
+                    <li>Easy to lose or forget</li>
+                    <li>Guests still ask for details</li>
+                    <li>No updates once printed</li>
+                    <li>Limited to physical sharing</li>
+                </ul>
+            </div>
+            <div class="figma-card bg-digital-grad digital-border-style shadow-md" data-aos="fade-left"
+                data-aos-duration="1000">
+                <div class="img-pos-digital"><img src="assets/images/Mockup 1.png" alt="Digital Card"
+                        style="width: 80px; height: 141px; object-fit: contain;"></div>
+                <div class="spacer-digital"></div>
+                <h3 class="figma-card-title text-white">Digital Invite</h3>
+                <div class="figma-line border-digital"></div>
+                <ul class="figma-list-text text-list-green list-disc pl-4 space-y-0">
+                    <li>All events, timings & venue in one place</li>
+                    <li>Share instantly on WhatsApp</li>
+                    <li>Update anytime if plans change</li>
+                    <li>Guests always have access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-[32px] mb-[22px] px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="figma-heading">POWERFUL FEATURES</h2>
+            <p class="figma-subheading">Everything you need for a perfect Digital Invite</p>
+        </div>
+
+        <div class="flex flex-col items-center w-full px-4 gap-[8px] overflow-hidden">
+            <div class="feature-bar" data-aos="fade-right" data-aos-duration="800"><img src="assets/icons/Clock.svg"
+                    alt="Clock" class="w-10 h-10 object-contain"><span class="feature-text">Event Schedule &
+                    Timeline</span></div>
+            <div class="feature-bar" data-aos="fade-left" data-aos-duration="800"><img src="assets/icons/Daily.svg"
+                    alt="Daily" class="w-10 h-10 object-contain"><span class="feature-text">Venue Location &
+                    Directions</span>
+            </div>
+            <div class="feature-bar" data-aos="fade-right" data-aos-duration="800"><img src="assets/icons/City.svg"
+                    alt="City" class="w-10 h-10 object-contain"><span class="feature-text">Live Updates</span>
+            </div>
+            <div class="feature-bar" data-aos="fade-left" data-aos-duration="800"><img src="assets/icons/dua.svg"
+                    alt="Dua" class="w-10 h-10 object-contain"><span class="feature-text">Easy Sharing</span></div>
+            <div class="feature-bar" data-aos="fade-right" data-aos-duration="800"><img src="assets/icons/Link.svg"
+                    alt="Link" class="w-10 h-10 object-contain"><span class="feature-text">No App Needed</span></div>
+        </div>
+    </section>
+
+    <section id="designs" class="bg-[#5B212F] py-10 w-full flex flex-col items-center overflow-hidden">
+        <div class="text-center mb-8 px-4" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="slide-heading mb-2">BEAUTIFUL DESIGNS. YOUR STYLE</h2>
+            <p class="slide-subheading">Choose from elegant templates that match you vibe.</p>
+        </div>
+
+        <div class="relative w-full max-w-[430px] flex flex-col items-center" data-aos="fade-up"
+            data-aos-duration="1200">
+            <div id="prevBtn" class="nav-arrow absolute left-6 top-[209px]">
+                <div class="arrow-icon arrow-left"></div>
+            </div>
+            <div id="nextBtn" class="nav-arrow absolute right-6 top-[209px]">
+                <div class="arrow-icon arrow-right"></div>
+            </div>
+
+            <div class="carousel-viewport" id="touchArea">
+                <div id="sliderTrack" class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="assets/images/Mockup 1.png" class="mockup-img" alt="Design 1">
+                        <div class="shadow-ellipse"></div>
+                        <a href="/printage/" target="_blank" class="view-live-btn hover:brightness-110 transition">View
+                            Live</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/Mockup 2.png" class="mockup-img" alt="Design 2">
+                        <div class="shadow-ellipse"></div>
+                        <a href="/ramadan2/" target="_blank" class="view-live-btn hover:brightness-110 transition">View
+                            Live</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/Mockup 3.png" class="mockup-img" alt="Design 3">
+                        <div class="shadow-ellipse"></div>
+                        <a href="/ramadan1/" target="_blank" class="view-live-btn hover:brightness-110 transition">View
+                            Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-[13px] mt-2" id="dotsContainer">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-white py-12 w-full flex flex-col items-center">
+        <h2 class="feature-showcase-heading mb-6 px-4" data-aos="fade-up" data-aos-duration="800">ALWAYS KNOW WHAT’S
+            NEXT</h2>
+        <div class="flex flex-col items-start w-[345px] mb-6" data-aos="fade-right" data-aos-duration="1000">
+            <p class="feature-label">Before Ramadan (Countdown to start)</p>
+            <div class="feature-card-1">
+                <img src="assets/images/time1.png" alt="Countdown" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="flex flex-col items-start w-[345px] mb-8" data-aos="fade-left" data-aos-duration="1000">
+            <p class="feature-label">During Ramadan (Daily updates)</p>
+            <div class="feature-card-2">
+                <img src="assets/images/time2.png" alt="Daily Updates" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <p class="feature-footer-text mb-6" data-aos="fade-up" data-aos-duration="800">A smart countdown that adapts
+            before and during Ramadan.</p>
+        <div class="bottom-divider"></div>
+    </section>
+
+    <section class="bg-white pb-12 w-full flex flex-col items-center overflow-hidden">
+        <h2 class="identity-heading" data-aos="fade-down" data-aos-duration="800">YOUR IDENTITY<br>RESPECTFULLY PLACED
+        </h2>
+        <div class="identity-grid">
+            <img src="assets/images/ad1.png" class="identity-img" alt="Ad Left" data-aos="fade-right"
+                data-aos-duration="1000">
+            <img src="assets/images/ad2.png" class="identity-img" alt="Ad Right" data-aos="fade-left"
+                data-aos-duration="1000">
+        </div>
+        <p class="identity-text" data-aos="fade-up" data-aos-duration="800">Represent your community or business without
+            interrupting the Ramadan flow.</p>
+        <div class="bottom-divider"></div>
+    </section>
+
+    <section id="contact" class="bg-white pb-16 w-full flex justify-center relative overflow-hidden">
+        <div class="flex flex-row items-center w-full max-w-sm px-4 relative h-[240px]">
+            <div class="flex flex-col z-20 relative" style="top: -20px;" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="contact-heading">SIMPLE.<br>DIGITAL.<br>READY TO SHARE.</h2>
+                <a href="https://wa.me/919326392368?text=Hello%2C%20I%20came%20across%20the%20Digital%20Ramadan%20Timetable.%20I%20am%20interested%20in%20creating%20a%20similar%20design%20for%20my%20requirements."
+                    class="cta-button">Create Your Timetable</a>
+            </div>
+            <div class="absolute right-[-70px] top-[10px] z-10" data-aos="fade-left" data-aos-duration="1200">
+                <img src="assets/images/Hand.png" class="animate-float" alt="Hand Holding Phone"
+                    style="width: 220px; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#5E2130] w-full flex flex-col items-center" style="height: 199px;">
+        <div class="w-full max-w-[428px] mx-auto px-[16px] relative h-full flex flex-col">
+            <!-- Top Section: Title & Links -->
+            <div class="w-full flex flex-row justify-between pt-[13px] h-[87px]">
+                <!-- Title -->
+                <div class="w-auto pt-[2px]">
+                    <h2
+                        class="font-poppins font-semibold text-[25px] leading-[112%] text-white text-center uppercase whitespace-nowrap">
+                        MY WEDDING<br>LINKS</h2>
+                </div>
+
+                <!-- Links -->
+                <div class="w-[150px] relative h-[60px]">
+                    <a href="#home"
+                        class="absolute left-0 top-0 font-roboto font-normal text-[17px] leading-[154%] text-white hover:opacity-80 transition">Home</a>
+                    <a href="#features"
+                        class="absolute left-[84px] top-0 font-roboto font-normal text-[17px] leading-[154%] text-white hover:opacity-80 transition">Features</a>
+                    <a href="#designs"
+                        class="absolute left-0 top-[34px] font-roboto font-normal text-[17px] leading-[154%] text-white hover:opacity-80 transition">Designs</a>
+                    <a href="#contact"
+                        class="absolute left-[84px] top-[34px] font-roboto font-normal text-[17px] leading-[154%] text-white hover:opacity-80 transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-full border-t border-white" style="height: 0px;"></div>
+
+            <!-- Bottom Section: Texts -->
+            <div class="flex flex-col items-center mt-[7px] gap-[7px]">
+                <p
+                    class="font-roboto font-normal text-[15px] leading-[154%] text-white text-center m-0 p-0 h-[23px] flex items-center">
+                    © 2026 myweddinglink.in All rights reserved.</p>
+                <p
+                    class="font-roboto font-normal text-[15px] leading-[154%] text-white text-center m-0 p-0 h-[23px] flex items-center">
+                    Professionally Crafted by&nbsp;<a href="https://www.eaznexora.com" target="_blank"
+                        class="underline hover:text-gray-200">Eaz Nexora</a></p>
+                <p
+                    class="font-roboto font-normal text-[15px] leading-[154%] text-white text-center m-0 p-0 h-[23px] flex items-center">
+                    Privacy & Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
