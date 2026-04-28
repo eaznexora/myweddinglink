@@ -99,7 +99,7 @@ function scaleSections() {
         { innerId: 'countdownInner', sectionId: 'countdownSection', designHeight: 300 },
         { innerId: 'mehendiInner', sectionId: 'mehendiSection', designHeight: 700 },
         { innerId: 'nikahInner', sectionId: 'nikahSection', designHeight: 920 },
-        { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 660 },
+        { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 680 },
         { innerId: 'footerInner', sectionId: 'footerSection', designHeight: 1300 }
     ];
 
