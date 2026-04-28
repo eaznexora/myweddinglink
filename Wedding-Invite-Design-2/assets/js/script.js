@@ -343,3 +343,35 @@ window.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     setInterval(updateCountdown, 60000); // Update every minute
 });
+
+// ============================================
+// ADD TO CALENDAR FUNCTIONALITY (.ics)
+// ============================================
+function addToCalendar(eventConfig) {
+    const { title, description, location, startDate, endDate, fileName } = eventConfig;
+    
+    // Generate the standard .ics file format string
+    const icsMSG = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//EazSocial//Wedding Invite//EN
+BEGIN:VEVENT
+UID:${new Date().getTime()}@eazsocial.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+DTSTART:${startDate}
+DTEND:${endDate}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+
+    // Create a Blob and trigger a download link
+    const blob = new Blob([icsMSG], { type: 'text/calendar;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', fileName || 'wedding_event.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
