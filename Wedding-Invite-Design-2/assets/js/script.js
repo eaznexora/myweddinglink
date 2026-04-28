@@ -95,8 +95,8 @@ function scaleSections() {
 
     // List of all sections that need fixed-canvas scaling
     const sectionsToScale = [
-        { innerId: 'heroInner', sectionId: 'heroSection', designHeight: 980 },
-        { innerId: 'countdownInner', sectionId: 'countdownSection', designHeight: 300 },
+        { innerId: 'heroInner', sectionId: 'heroSection', designHeight: 1050 },
+        { innerId: 'countdownInner', sectionId: 'countdownSection', designHeight: 250 },
         { innerId: 'mehendiInner', sectionId: 'mehendiSection', designHeight: 700 },
         { innerId: 'nikahInner', sectionId: 'nikahSection', designHeight: 920 },
         { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 660 },
