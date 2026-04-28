@@ -100,7 +100,7 @@ function scaleSections() {
         { innerId: 'mehendiInner', sectionId: 'mehendiSection', designHeight: 700 },
         { innerId: 'nikahInner', sectionId: 'nikahSection', designHeight: 920 },
         { innerId: 'receptionInner', sectionId: 'receptionSection', designHeight: 680 },
-        { innerId: 'footerInner', sectionId: 'footerSection', designHeight: 1300 }
+        { innerId: 'footerInner', sectionId: 'footerSection', designHeight: 1100 }
     ];
 
     sectionsToScale.forEach((sec) => {
@@ -349,7 +349,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ============================================
 function addToCalendar(eventConfig) {
     const { title, description, location, startDate, endDate, fileName } = eventConfig;
-    
+
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
     if (isIOS) {
