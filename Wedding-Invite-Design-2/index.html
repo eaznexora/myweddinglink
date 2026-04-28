@@ -360,7 +360,7 @@
                 </section>
 
                 <!-- ================================ -->
-                <!-- NIKAH CARD (Pixel-perfect)       -->
+                <!-- NIKAH CARD        -->
                 <!-- ================================ -->
                 <section id="nikahSection" class="relative w-full overflow-visible"
                     style="margin-top:-30px; z-index:20; position:relative;">
@@ -383,24 +383,27 @@
                             <img src="assets/icons/ring.svg" alt="Ring" style="width:34px; height:38.64px;">
                         </div>
 
-                        <!-- Nikah Ceremony Title -->
-                        <div class="absolute anim-fade-up flex flex-col items-start"
-                            style="width:333px; height:auto; left:170px; top:43px; z-index:2;">
+                        <!-- Nikah Title -->
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:107px; height:63px; left:222px; top:43px; z-index:2;">
                             <h3 class="font-cardo m-0 p-0"
                                 style="font-weight:400; font-size:40px; line-height:54px; color:#4F3951;">Nikah</h3>
+                        </div>
+
+                        <!-- Ceremony Title -->
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:178px; height:54px; left:170px; top:79px; z-index:2;">
                             <h3 class="font-carattere m-0 p-0"
-                                style="font-weight:400; font-size:55px; line-height:54px; color:#625125; margin-top:-5px;">
+                                style="font-weight:400; font-size:55px; line-height:54px; color:#625125;">
                                 Ceremony</h3>
                         </div>
 
                         <!-- Breakdown Divider -->
-                        <div class="absolute anim-fade-up flex items-center justify-center"
-                            style="width:396px; height:62px; left:calc(50% - 396px/2); top:159px; z-index:2;">
-                            <img src="assets/icons/breakdown.svg" alt="divider" style="width:157px; height:62px;">
-                            <div class="absolute"
-                                style="width:121px; height:4px; right:16px; top:29px; background:#B4AE99;"></div>
-                            <div class="absolute"
-                                style="width:121px; height:4px; left:16px; top:29px; background:#B4AE99; transform:matrix(-1, 0, 0, 1, 0, 0);">
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:62px; left:0; top:159px; z-index:2;">
+                            <!-- Floral Center -->
+                            <div class="absolute" style="width:396px; height:62px; left:calc(50% - 396px/2); top:0px;">
+                                <img src="assets/flowers/flower-breakdown.png" alt="divider" class="w-full h-full">
                             </div>
                         </div>
 
@@ -433,13 +436,29 @@
                         </div>
 
                         <!-- Line 3 (Gold) -->
-                        <div class="absolute anim-fade-up line-dot line-dot-gold"
-                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:420px; border-top:1.5px solid #AC9353; z-index:2;">
+                        <div class="absolute anim-fade-up"
+                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:311px; border: 0.75px solid #AC9353; z-index:2;">
+                            <!-- Left Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Right Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; right:-3px; top:-3px;">
+                            </div>
                         </div>
 
                         <!-- Vertical Line Divider -->
                         <div class="absolute anim-fade-up"
-                            style="width:0px; height:138px; left:calc(50% + 69px); top:433px; border-left:1.5px solid #AC9353; z-index:2;">
+                            style="width:0px; height:138px; left:50%; top:433px; border-left:0.75px solid #AC9353; z-index:2;">
+                            <!-- Top Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Bottom Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; bottom:-3px;">
+                            </div>
                         </div>
 
                         <!-- 3-Column: Time (left) + Dinner (right) -->
@@ -450,7 +469,7 @@
                                 style="width:38px; height:38px; margin-bottom:4px;">
                             <p class="font-rufina m-0 p-0"
                                 style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
-                                Time<br>After<br>Namaz-e-Magrib
+                                Time<br>After Namaz-<br>e-Magrib
                             </p>
                         </div>
 
@@ -466,31 +485,44 @@
                         </div>
 
                         <!-- Venue Card -->
-                        <div class="absolute anim-fade-up flex flex-col items-center"
+                        <div class="absolute anim-fade-up border-box"
                             style="width:358px; height:189px; left:calc(50% - 358px/2); top:622px; background:#FFFBFF; border:1px solid rgba(104, 60, 108, 0.32); box-shadow:0px 1px 4px 2px rgba(98, 80, 99, 0.06); border-radius:10px; z-index:2;">
                             <!-- Overlapping location icon -->
                             <div class="absolute rounded-full flex items-center justify-center"
-                                style="width:69px; height:69px; left:calc(50% - 69px/2); top:-34px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                style="width:69px; height:69px; left:calc(50% - 69px/2 - 0.5px); top:-35px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/icons/location-nikah.svg" alt="Location"
                                     style="width:30px; height:37px;">
                             </div>
 
-                            <p class="font-rufina m-0 p-0"
-                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350; margin-top:45px;">
-                                Venue</p>
-                            <p class="font-rufina m-0 p-0 mt-1"
-                                style="font-weight:700; font-size:30px; line-height:37px; color:#4F4350;">The Grant Taj
-                            </p>
-                            <p class="font-rufina m-0 p-0 mt-1"
-                                style="font-weight:400; font-size:20px; line-height:25px; color:#4F4350;">Grant Road,
-                                Mumbai</p>
+                            <!-- Venue -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:70px; height:27px; left:calc(50% - 70px/2); top:38px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                    Venue</p>
+                            </div>
+
+                            <!-- The Grant Taj -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:191px; height:37px; left:calc(50% - 191px/2 - 0.5px); top:70px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:700; font-size:30px; line-height:37px; color:#4F4350;">The Grant
+                                    Taj
+                                </p>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:193px; height:25px; left:calc(50% - 193px/2 + 0.5px); top:107px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:20px; line-height:25px; color:#4F4350;">Grant
+                                    Road, Mumbai</p>
+                            </div>
 
                             <!-- Open Venue Map button -->
                             <a href="https://maps.app.goo.gl/yA6dHcQhhFL7MUf69"
-                                class="flex items-center justify-center transition-transform hover:scale-105 mt-2"
-                                style="width:332px; height:29px; background:#B587B5; border:0.5px solid #7D5B7D; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.19); border-radius:5px; text-decoration:none; gap:6px;">
-                                <img src="assets/icons/location.svg" alt="Location"
-                                    style="width:14px; height:18px; filter:brightness(0) invert(1);">
+                                class="absolute flex items-center justify-center transition-transform hover:scale-105"
+                                style="width:332px; height:29px; left:calc(50% - 332px/2); top:145px; background:#B587B5; border:0.5px solid #7D5B7D; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.19); border-radius:5px; text-decoration:none; gap:10px; padding:10px; box-sizing:border-box;">
                                 <span class="font-cambria m-0 p-0"
                                     style="font-weight:400; font-size:18px; line-height:21px; color:#FFFFFF;">Open
                                     Venue Map</span>
@@ -499,7 +531,7 @@
 
                         <!-- Side Flower (Flowers-map) -->
                         <div class="absolute anim-slide-left pointer-events-none"
-                            style="width:181px; height:350px; left:33px; top:698px; z-index:3; transform:rotate(98.27deg);">
+                            style="width:396px; height:62px; left:calc(50% - 396px/2); top:698px; z-index:1;">
                             <img src="assets/flowers/Flowers-map.png" alt="Flower"
                                 class="w-full h-auto block anim-float">
                         </div>
