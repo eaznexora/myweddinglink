@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
+            var newUrl = window.location.href + "/";
+            window.history.replaceState(null, '', newUrl);
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#E9E3DA">
+
+    <title>Fatima & Hamdan — Wedding Invitation</title>
+    <meta name="description"
+        content="You are cordially invited to the wedding celebration of Fatima & Hamdan. Join us for the Mehendi, Nikah Ceremony & Reception.">
+    <meta name="author" content="Eaz Nexora">
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn preview) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="💍 Fatima & Hamdan — Wedding Invitation">
+    <meta property="og:description"
+        content="With gratitude to Allah, we invite you to witness the wedding of Fatima & Hamdan. Click to open your special invitation.">
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:image:width" content="428">
+    <meta property="og:image:height" content="930">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="💍 Fatima & Hamdan — Wedding Invitation">
+    <meta name="twitter:description"
+        content="You are cordially invited to the wedding of Fatima & Hamdan. Open your special invitation.">
+    <meta name="twitter:image" content="favicon.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Italianno&family=Carattere&family=Rufina:wght@400;700&family=Prata&family=Scheherazade+New:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+
+    <!-- Intro Screen CSS (Untouched) -->
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+
+    <!-- Main Page Styles (separated) -->
+    <link rel="stylesheet" href="assets/css/main.css?v=6">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ============================== -->
+        <!-- MAIN INVITATION CONTENT        -->
+        <!-- ============================== -->
+        <div class="main-invitation" id="mainInvitation">
+            <div class="glitter-container" id="glitterContainer"></div>
+
+            <!-- Background Music -->
+            <audio id="bgMusic" loop preload="auto">
+                <source src="music.mp3" type="audio/mpeg">
+            </audio>
+
+            <!-- Music Control Button -->
+            <button id="musicToggleBtn" class="absolute top-[20px] right-[20px] z-[100] w-[40px] h-[40px] rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 scale-90" 
+                    style="background: rgba(142, 102, 142, 0.4); border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); color: #4F4350;"
+                    onclick="toggleMusic()">
+                <!-- Unmuted Icon -->
+                <svg id="iconUnmuted" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                </svg>
+                <!-- Muted Icon -->
+                <svg id="iconMuted" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+            </button>
+
+            <!-- Scrollable content wrapper -->
+            <div class="invitation-content" id="invitationContent"
+                style="width:100%; height:100%; overflow-y:auto; overflow-x:hidden; position:relative; z-index:2; background-color:#FEF3FF; padding-bottom:120px;">
+
+                <!-- ================================ -->
+                <!-- HERO SECTION (Pixel-perfect)     -->
+                <!-- ================================ -->
+                <section id="heroSection" class="relative w-full overflow-visible">
+                    <!-- Inner 428x1050 canvas that scales to fit screen width -->
+                    <div id="heroInner" class="relative" style="width:428px; height:1050px; transform-origin:top left;">
+
+                        <!-- Hero BG (Lavender) -->
+                        <div class="absolute"
+                            style="width:596px; height:1050px; top:0; left:calc(50% - 596px/2 - 84px);">
+                            <img src="assets/bg/Hero-lavender-bg.png" alt="Hero BG" class="w-full h-full">
+                        </div>
+
+                        <!-- Top-Right Flower (top1) -->
+                        <img src="assets/flowers/top1.png" alt="Floral" class="absolute anim-hero pointer-events-none"
+                            style="width:230px; height:auto; left:0px; top:0px; z-index:1; transition-delay:0.1s;">
+
+                        <!-- Top-Left Flower (top2) -->
+                        <img src="assets/flowers/top2.png" alt="Floral" class="absolute anim-hero pointer-events-none"
+                            style="width:230px; height:auto; right:0px; top:0px; z-index:1; transition-delay:0.1s;">
+
+                        <!-- Bismillah -->
+                        <div class="absolute anim-hero flex items-end justify-center text-center"
+                            style="width:190px; height:46px; left:calc(50% - 190px/2 + 3px); top:67px; z-index:5; transition-delay:0.2s;">
+                            <p class="font-arabic m-0 p-0"
+                                style="font-style:normal; font-weight:400; font-size:22px; line-height:46px; color:#A879AD; white-space:nowrap;">
+                                بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+                            </p>
+                        </div>
+
+                        <!-- Parent's Note Line 1 -->
+                        <div class="absolute anim-hero text-center"
+                            style="width:380px; height:auto; left:calc(50% - 380px/2); top:120px; transition-delay:0.35s;">
+                            <p class="font-cambria italic m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:30px; color:#3E2840;">
+                                With gratitude to Allah,<br>
+                                I invite you to witness<br>
+                                one of the most<br>
+                                meaningful moments of my life…
+                            </p>
+                        </div>
+
+                        <!-- Parent's Note Line 2 -->
+                        <div class="absolute anim-hero text-center"
+                            style="width:380px; height:auto; left:calc(50% - 380px/2); top:260px; transition-delay:0.5s;">
+                            <p class="font-cambria italic m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:30px; color:#3E2840;">
+                                With love, pride, and countless prayers,<br>
+                                I invite you to be part of my daughter's<br>
+                                wedding day
+                            </p>
+                        </div>
+
+                        <!-- Bride Name: Fatima -->
+                        <div class="absolute anim-hero flex items-end justify-center text-center"
+                            style="width:300px; height:auto; left:calc(50% - 300px/2); top:430px; transition-delay:0.65s;">
+                            <h2 class="font-carattere m-0 p-0"
+                                style="font-weight:400; font-size:90px; line-height:1.1; color:#6D2D73;">
+                                Fatima
+                            </h2>
+                        </div>
+
+                        <!-- Bride's Father -->
+                        <div class="absolute anim-hero text-center"
+                            style="width:400px; height:auto; left:calc(50% - 400px/2); top:540px; transition-delay:0.75s;">
+                            <p class="font-cambria italic m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:24px; color:#572D57;">
+                                D/o Mr. Nasiruddin Jameel Shekhani
+                            </p>
+                        </div>
+
+                        <!-- Weds SVG Divider -->
+                        <div class="absolute anim-hero"
+                            style="width:312px; height:41px; left:57px; top:590px; transition-delay:0.8s;">
+                            <img src="assets/icons/weds.svg" alt="Weds" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- Groom Name: Hamdan -->
+                        <div class="absolute anim-hero flex items-end justify-center text-center"
+                            style="width:300px; height:auto; left:calc(50% - 300px/2); top:640px; transition-delay:0.85s;">
+                            <h2 class="font-carattere m-0 p-0"
+                                style="font-weight:400; font-size:85px; line-height:1.1; color:#6D2D73;">
+                                Hamdan
+                            </h2>
+                        </div>
+
+                        <!-- Groom's Father -->
+                        <div class="absolute anim-hero text-center"
+                            style="width:400px; height:auto; left:calc(50% - 400px/2); top:740px; transition-delay:0.95s;">
+                            <p class="font-cambria italic m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:24px; color:#572D57;">
+                                S/o Mr. Umar Khaleel Shaikh
+                            </p>
+                        </div>
+
+                        <!-- Breakdown Gold Divider -->
+                        <div class="absolute anim-hero flex items-center justify-center"
+                            style="width:396px; height:62px; left:calc(50% - 396px/2); top:790px; z-index:10; transition-delay:1.0s;">
+                            <img src="assets/flowers/flower-breakdown.png" alt="divider"
+                                style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- Invitation Message -->
+                        <div class="absolute anim-hero text-center"
+                            style="width:380px; height:auto; left:calc(50% - 380px/2); top:870px; transition-delay:1.1s;">
+                            <p class="font-cambria italic m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:30px; color:#3E2840;">
+                                As my daughter begins<br>
+                                a new chapter,<br>
+                                your presence will make<br>
+                                this moment truly complete.
+                            </p>
+                        </div>
+
+                        <!-- Bottom Flowers Horizontal -->
+                        <img src="assets/flowers/Flowers-horizontal.png" alt="Flowers"
+                            class="absolute anim-hero pointer-events-none"
+                            style="width:300px; height:auto; left:64px; top:980px; z-index:10; transition-delay:1.2s;">
+
+                        <!-- Lavender Bar (at the very bottom of the hero) -->
+                        <div class="absolute lavender-bar"
+                            style="width:428px; height:5px; left:0; top:1050px; background:#E2C4E2;"></div>
+
+                    </div>
+                </section>
+
+
+                <!-- ================================ -->
+                <!-- COUNTDOWN SECTION (Days Until)   -->
+                <!-- ================================ -->
+                <section id="countdownSection" class="relative w-full overflow-hidden">
+                    <div id="countdownInner" class="relative"
+                        style="width:428px; height:300px; transform-origin:top left;">
+                        <!-- Countdown Number -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:200px; height:86px; left:calc(50% - 200px/2); top:55px;">
+                            <p id="countdownNumber" class="m-0 p-0"
+                                style="font-family:'Times New Roman',serif; font-weight:400; font-size:75px; line-height:86px; color:#000000;">
+                                --
+                            </p>
+                        </div>
+                        <!-- Days Until Nikah Label -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:196px; height:42px; left:calc(50% - 196px/2); top:140px;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:25px; line-height:42px; color:#000000;">
+                                Days Until Nikah
+                            </p>
+                        </div>
+
+                        <!-- Flower Breakdown Divider -->
+                        <div class="absolute anim-fade-up flex items-center justify-center"
+                            style="width:396px; height:62px; left:calc(50% - 396px/2); top:220px; z-index:10;">
+                            <img src="assets/flowers/flower-breakdown.png" alt="divider"
+                                style="width:100%; height:100%;">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================================ -->
+                <!-- MEHENDI SECTION (Pixel-perfect)  -->
+                <!-- ================================ -->
+                <section id="mehendiSection" class="relative w-full overflow-visible"
+                    style="margin-top:0px; position:relative; z-index:30;">
+                    <!-- Inner 428px canvas -->
+                    <div id="mehendiInner" class="relative"
+                        style="width:428px; height:700px; transform-origin:top left;">
+
+                        <!-- Wedding Events Title (Text) -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:228px; height:43px; left:calc(50% - 228px/2); top:0px; z-index:5;">
+                            <h3 class="font-cardo m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#8E668E;">
+                                Wedding Events
+                            </h3>
+                        </div>
+
+                        <!-- Purple Gradient Bar -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:8px; left:0; top:55px; background:linear-gradient(270deg, #8E668E 0%, #EAD1ED 100%); transform:matrix(-1, 0, 0, 1, 0, 0); z-index:5;">
+                        </div>
+
+                        <!-- Mehendi Section Flower -->
+                        <div class="absolute anim-slide-left"
+                            style="width:180px; height:auto; top:-25px; left:0; z-index:5;">
+                            <img src="assets/flowers/mehendi-topleft.png" alt="Mehendi flower"
+                                class="w-full h-auto block anim-float">
+                        </div>
+
+                        <!-- Mehendi Evening Title Group -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:150px; left:0; top:98px; z-index:5;">
+                            <!-- Mehendi Circle -->
+                            <div class="absolute flex items-center justify-center rounded-full"
+                                style="width:78px; height:78px; left:61px; top:5px; background:#EDDBF4;">
+                                <img src="assets/icons/mehendi.svg" alt="Mehendi" style="width:38px; height:47px;">
+                            </div>
+                            <!-- Mehendi Text -->
+                            <div class="absolute" style="left:198px; top:0px;">
+                                <p class="font-cardo m-0 p-0" style="font-weight:400; font-size:40px; color:#2F3B1A;">
+                                    Mehendi</p>
+                            </div>
+                            <!-- Evening Text -->
+                            <div class="absolute" style="left:151px; top:34px;">
+                                <p class="font-carattere m-0 p-0"
+                                    style="font-weight:400; font-size:55px; color:#625125;">Evening</p>
+                            </div>
+                        </div>
+
+                        <!-- Flower Breakdown Divider with Lines -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:62px; left:0; top:222px; z-index:5;">
+                            <!-- Floral Center -->
+                            <div class="absolute" style="width:396px; height:62px; left:calc(50% - 396px/2); top:0px;">
+                                <img src="assets/flowers/flower-breakdown.png" alt="divider" class="w-full h-full">
+                            </div>
+                        </div>
+
+                        <!-- Subtitle -->
+                        <div class="absolute anim-fade-up text-center"
+                            style="width:308px; height:54px; left:calc(50% - 308px/2); top:285px; z-index:5;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                An evening filled with colors and celebration
+                            </p>
+                        </div>
+
+                        <!-- Gold Divider Line with Dots -->
+                        <div class="absolute anim-fade-up"
+                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:360px; border: 0.75px solid #AC9353; z-index:5;">
+                            <!-- Left Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Right Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; right:-3px; top:-3px;">
+                            </div>
+                        </div>
+
+                        <!-- Info Icons Row -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:100px; left:0; top:396px; z-index:5;">
+                            <!-- Calendar -->
+                            <img src="assets/icons/Calendar.svg" alt="Calendar" class="absolute"
+                                style="width:32px; height:32px; left:calc(50% - 32px/2 - 125px); top:2px;">
+                            <!-- Clock -->
+                            <img src="assets/icons/clock.svg" alt="Clock" class="absolute"
+                                style="width:38px; height:38px; left:calc(50% - 38px/2); top:0px;">
+                            <!-- Dinner Vector -->
+                            <img src="assets/icons/dinner.svg" alt="Dinner" class="absolute"
+                                style="width:38px; height:28px; left:calc(50% - 38px/2 + 128px); top:6px;">
+                        </div>
+
+                        <!-- Info Text Row -->
+                        <div class="absolute anim-fade-up text-center"
+                            style="width:428px; height:100px; left:0; top:460px; z-index:5;">
+                            <!-- Friday -->
+                            <p class="absolute font-rufina m-0 p-0"
+                                style="width:135px; left:21px; top:8px; font-size:22px; color:#4F4350;">Friday, 23 May
+                                2026</p>
+                            <!-- Time -->
+                            <p class="absolute font-rufina m-0 p-0"
+                                style="width:92px; left:168px; top:0px; font-size:22px; color:#4F4350;">Time 07:00PM
+                                Onwards</p>
+                            <!-- Dinner -->
+                            <p class="absolute font-rufina m-0 p-0"
+                                style="width:100px; left:295px; top:8px; font-size:22px; color:#4F4350;">Dinner to
+                                Follow</p>
+                        </div>
+
+                        <!-- Open Venue Map Button -->
+                        <a href="https://maps.app.goo.gl/yA6dHcQhhFL7MUf69" target="_blank"
+                            class="absolute anim-fade-up flex items-center justify-center gap-2 no-underline"
+                            style="width:370px; height:46px; left:calc(50% - 370px/2); top:574px; background:#9F6FA3; border-radius:7px; box-shadow:0px 4px 4px #CEC6D4; z-index:10;">
+                            <img src="assets/icons/location.svg" alt="Loc"
+                                style="width:18px; height:22px; filter:brightness(0) invert(1);">
+                            <span class="font-cambria" style="font-size:22px; color:#FFFFFF;">Open Venue Map</span>
+                        </a>
+
+                        <!-- Side Flower Bottom-Right (Floating fixed, no rotation) -->
+                        <div class="absolute anim-slide-right pointer-events-none"
+                            style="width:200px; height:auto; right:0px; top:580px; z-index:3;">
+                            <img src="assets/flowers/nikah-topright.png" alt="Flower"
+                                class="w-full h-auto block anim-float">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================================ -->
+                <!-- NIKAH CARD        -->
+                <!-- ================================ -->
+                <section id="nikahSection" class="relative w-full overflow-visible"
+                    style="margin-top:-30px; z-index:20; position:relative;">
+                    <div id="nikahInner" class="relative" style="width:428px; height:920px; transform-origin:top left;">
+
+                        <!-- Gradient Bar -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:8px; left:0; top:0px; background:linear-gradient(270deg, #8E668E 0%, #EAD1ED 100%);">
+                        </div>
+
+                        <!-- Nikah Card BG -->
+                        <div class="absolute anim-fade-up border-box"
+                            style="width:428px; height:901px; left:calc(50% - 428px/2); top:8px; z-index:1;">
+                            <img src="assets/bg/Nikah Card.png" alt="Nikah Card BG" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Nikah Ring Circle -->
+                        <div class="absolute anim-fade-up flex items-center justify-center rounded-full"
+                            style="width:78px; height:78px; left:80px; top:48px; background:#DDCBE4; z-index:2;">
+                            <img src="assets/icons/ring.svg" alt="Ring" style="width:34px; height:38.64px;">
+                        </div>
+
+                        <!-- Nikah Title -->
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:107px; height:63px; left:222px; top:43px; z-index:2;">
+                            <h3 class="font-cardo m-0 p-0"
+                                style="font-weight:400; font-size:40px; line-height:54px; color:#4F3951;">Nikah</h3>
+                        </div>
+
+                        <!-- Ceremony Title -->
+                        <div class="absolute anim-fade-up flex items-center"
+                            style="width:178px; height:54px; left:170px; top:79px; z-index:2;">
+                            <h3 class="font-carattere m-0 p-0"
+                                style="font-weight:400; font-size:55px; line-height:54px; color:#625125;">
+                                Ceremony</h3>
+                        </div>
+
+                        <!-- Breakdown Divider -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:62px; left:0; top:159px; z-index:2;">
+                            <!-- Floral Center -->
+                            <div class="absolute" style="width:396px; height:62px; left:calc(50% - 396px/2); top:0px;">
+                                <img src="assets/flowers/flower-breakdown.png" alt="divider" class="w-full h-full">
+                            </div>
+                        </div>
+
+                        <!-- Subtitle -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:308px; height:54px; left:calc(50% - 308px/2); top:235px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                A sacred union, blessed with<br>faith and love.
+                            </p>
+                        </div>
+
+                        <!-- Date Row with Calendar Icon -->
+                        <div class="absolute anim-fade-up flex items-center justify-center"
+                            style="width:306px; height:38px; left:calc(50% - 306px/2); top:328px; z-index:2; gap:10px;">
+                            <img src="assets/icons/Calendar.svg" alt="Calendar" style="width:38px; height:38px;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:26px; line-height:32px; color:#4F4350;">
+                                Sunday, 25 May 2026
+                            </p>
+                        </div>
+
+                        <!-- Add to Calendar Button -->
+                        <div onclick="addToCalendar({
+                            title: 'Fatima & Hamdan - Nikah Ceremony',
+                            description: 'A sacred union, blessed with faith and love.',
+                            location: 'The Grant Taj, Grant Road, Mumbai',
+                            startDate: '20260525T140000Z',
+                            endDate: '20260525T180000Z',
+                            fileName: 'Nikah_Ceremony.ics'
+                        })" class="absolute anim-fade-up flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
+                            style="width:181px; height:24px; left:calc(50% - 181px/2 + 0.5px); top:376px; background:#67436B; border-radius:100px; z-index:2;">
+                            <p class="font-rufina m-0 p-0 pointer-events-none"
+                                style="font-weight:400; font-size:16px; line-height:20px; color:#FFFFFF;">
+                                Add to Calendar
+                            </p>
+                        </div>
+
+                        <!-- Line 3 (Gold) -->
+                        <div class="absolute anim-fade-up"
+                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:311px; border: 0.75px solid #AC9353; z-index:2;">
+                            <!-- Left Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Right Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; right:-3px; top:-3px;">
+                            </div>
+                        </div>
+
+                        <!-- Vertical Line Divider -->
+                        <div class="absolute anim-fade-up"
+                            style="width:0px; height:138px; left:50%; top:433px; border-left:0.75px solid #AC9353; z-index:2;">
+                            <!-- Top Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Bottom Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; bottom:-3px;">
+                            </div>
+                        </div>
+
+                        <!-- 3-Column: Time (left) + Dinner (right) -->
+                        <!-- Column 1: Time -->
+                        <div class="absolute anim-fade-up flex flex-col items-center justify-center text-center"
+                            style="width:140px; height:100px; left:calc(50% - 140px/2 - 111px); top:440px; z-index:2;">
+                            <img src="assets/icons/clock.svg" alt="Clock"
+                                style="width:38px; height:38px; margin-bottom:4px;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                Time<br>After Namaz-<br>e-Magrib
+                            </p>
+                        </div>
+
+                        <!-- Column 2: Dinner -->
+                        <div class="absolute anim-fade-up flex flex-col items-center justify-center text-center"
+                            style="width:108px; height:100px; left:calc(50% - 108px/2 + 100px); top:440px; z-index:2;">
+                            <img src="assets/icons/dinner.svg" alt="Dinner"
+                                style="width:38px; height:28px; margin-bottom:12px;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                Dinner to<br>Follow
+                            </p>
+                        </div>
+
+                        <!-- Venue Card -->
+                        <div class="absolute anim-fade-up border-box"
+                            style="width:358px; height:189px; left:calc(50% - 358px/2); top:622px; background:#FFFBFF; border:1px solid rgba(104, 60, 108, 0.32); box-shadow:0px 1px 4px 2px rgba(98, 80, 99, 0.06); border-radius:10px; z-index:2;">
+                            <!-- Overlapping location icon -->
+                            <div class="absolute rounded-full flex items-center justify-center"
+                                style="width:69px; height:69px; left:calc(50% - 69px/2 - 0.5px); top:-35px; background:linear-gradient(360deg, #FFF6EB 0%, #FFFFFF 100%); box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                <img src="assets/icons/location-nikah.svg" alt="Location"
+                                    style="width:30px; height:37px;">
+                            </div>
+
+                            <!-- Venue -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:70px; height:27px; left:calc(50% - 70px/2); top:38px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                    Venue</p>
+                            </div>
+
+                            <!-- The Grant Taj -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:191px; height:37px; left:calc(50% - 191px/2 - 0.5px); top:70px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:700; font-size:30px; line-height:37px; color:#4F4350;">The Grant
+                                    Taj
+                                </p>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="absolute flex justify-center text-center"
+                                style="width:193px; height:25px; left:calc(50% - 193px/2 + 0.5px); top:107px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:20px; line-height:25px; color:#4F4350;">Grant
+                                    Road, Mumbai</p>
+                            </div>
+
+                            <!-- Open Venue Map button -->
+                            <a href="https://maps.app.goo.gl/yA6dHcQhhFL7MUf69"
+                                class="absolute flex items-center justify-center transition-transform hover:scale-105"
+                                style="width:332px; height:29px; left:calc(50% - 332px/2); top:145px; background:#B587B5; border:0.5px solid #7D5B7D; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.19); border-radius:5px; text-decoration:none; gap:10px; padding:10px; box-sizing:border-box;">
+                                <span class="font-cambria m-0 p-0"
+                                    style="font-weight:400; font-size:18px; line-height:21px; color:#FFFFFF;">Open
+                                    Venue Map</span>
+                            </a>
+                        </div>
+
+                        <!-- Side Flower (Flowers-map) -->
+                        <div class="absolute anim-slide-left pointer-events-none"
+                            style="width:396px; height:62px; left:calc(50% - 396px/2); top:698px; z-index:1;">
+                            <img src="assets/flowers/Flowers-map.png" alt="Flower"
+                                class="w-full h-auto block anim-float">
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- ================================ -->
+                <!--          RECEPTION CARD          -->
+                <!-- ================================ -->
+                <section id="receptionSection" class="relative w-full overflow-visible"
+                    style="margin-top:-20px; z-index:10; position:relative;">
+                    <div id="receptionInner" class="relative"
+                        style="width:428px; height:680px; transform-origin:top left;">
+
+                        <!-- Gradient Bar -->
+                        <div class="absolute anim-fade-up"
+                            style="width:428px; height:8px; left:0; top:0px; background:linear-gradient(270deg, #8E668E 0%, #EAD1ED 100%); transform:matrix(-1, 0, 0, 1, 0, 0);">
+                        </div>
+
+                        <!-- Reception Card Box -->
+                        <div class="absolute anim-fade-up border-box overflow-hidden"
+                            style="width:396px; height:563px; left:calc(50% - 396px/2); top:87px; background:#FFFBFF; border:1px solid #C5B8C7; box-shadow:0px 0px 6.1px rgba(109, 97, 112, 0.62); border-radius:15px; z-index:1;">
+                        </div>
+
+                        <!-- Dome Circle Icon -->
+                        <div class="absolute anim-fade-up flex items-center justify-center rounded-full"
+                            style="width:78px; height:78px; left:81px; top:119px; background:#DDCBE4; z-index:2;">
+                            <img src="assets/icons/reception.svg" alt="" style="width:60px; height:41px;">
+                        </div>
+
+                        <!-- Title -->
+                        <div class="absolute anim-fade-up flex items-center text-left"
+                            style="width:173px; height:54px; left:174px; top:131px; z-index:2;">
+                            <h3 class="font-carattere m-0 p-0"
+                                style="font-weight:400; font-size:55px; line-height:54px; color:#625125;">Reception</h3>
+                        </div>
+
+                        <!-- Breakdown Divider -->
+                        <div class="absolute anim-fade-up"
+                            style="width:372px; height:62px; left:calc(50% - 372px/2); top:210px; z-index:2;">
+                            <img src="assets/flowers/flower-breakdown.png" alt="divider" class="w-full h-full">
+                        </div>
+
+                        <!-- Subtitle -->
+                        <div class="absolute anim-fade-up flex items-center justify-center text-center"
+                            style="width:308px; height:81px; left:calc(50% - 308px/2); top:285px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:22px; line-height:27px; color:#4F4350;">
+                                An evening filled with joy,<br>celebration, and shared<br>happiness.
+                            </p>
+                        </div>
+
+                        <!-- Line 4 (Gold) -->
+                        <div class="absolute anim-fade-up"
+                            style="width:334px; height:0px; left:calc(50% - 334px/2); top:386px; border: 0.75px solid #AC9353; z-index:2;">
+                            <!-- Left Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; left:-3px; top:-3px;">
+                            </div>
+                            <!-- Right Dot -->
+                            <div class="absolute"
+                                style="width:6px; height:6px; background:#AC9353; border-radius:50%; right:-3px; top:-3px;">
+                            </div>
+                        </div>
+
+                        <!-- Event Details -->
+                        <!-- Calendar Icon -->
+                        <div class="absolute anim-fade-up"
+                            style="width:32px; height:32px; left:calc(50% - 32px/2 - 121.17px); top:414px; z-index:2;">
+                            <img src="assets/icons/Calendar.svg" alt="Calendar" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- Date Text -->
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:135px; height:54px; left:calc(50% - 135px/2 - 121.5px); top:483px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:27px; color:#4F4350;">
+                                Friday, 23<br>May 2026
+                            </p>
+                        </div>
+
+                        <!-- Clock Icon -->
+                        <div class="absolute anim-fade-up"
+                            style="width:38px; height:38px; left:calc(50% - 38px/2 + 4px); top:411px; z-index:2;">
+                            <img src="assets/icons/clock.svg" alt="Clock" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- Time Text -->
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:92px; height:81px; left:calc(50% - 92px/2 + 4px); top:469px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:27px; color:#4F4350;">
+                                Time<br>07:00PM<br>Onwards
+                            </p>
+                        </div>
+
+                        <!-- Dinner Icon -->
+                        <div class="absolute anim-fade-up"
+                            style="width:38px; height:28px; left:calc(50% - 38px/2 + 133px); top:414px; z-index:2;">
+                            <img src="assets/icons/dinner.svg" alt="Dinner" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- Dinner Text -->
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:96px; height:54px; left:calc(50% - 96px/2 + 133px); top:483px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:20px; line-height:27px; color:#4F4350;">
+                                Dinner to<br>Follow
+                            </p>
+                        </div>
+
+                        <!-- View Location Button (Purple) -->
+                        <a href="https://maps.app.goo.gl/yA6dHcQhhFL7MUf69"
+                            class="absolute flex items-center justify-center transition-transform hover:scale-105 anim-fade-up"
+                            style="width:370px; height:46px; left:calc(50% - 370px/2 + 4px); top:589px; background:#9F6FA3; border:1px solid rgba(208, 123, 216, 0.11); box-shadow:0px 4px 4px #CEC6D4; border-radius:7px; text-decoration:none; z-index:2; gap:10px;">
+                            <img src="assets/icons/location.svg" alt="Location"
+                                style="width:18px; height:22px; filter:brightness(0) invert(1);">
+                            <span class="font-cambria m-0 p-0"
+                                style="font-weight:400; font-size:22px; color:#FFFFFF;">Open Venue Map</span>
+                        </a>
+
+                    </div>
+                </section>
+
+
+                <!-- ================================ -->
+                <!-- UNIFIED FOOTER SECTION           -->
+                <!-- ================================ -->
+                <section id="footerSection" class="relative w-full overflow-visible"
+                    style="margin-top:-20px; z-index:5; position:relative;">
+                    <div id="footerInner" class="relative"
+                        style="width:428px; height:1210px; transform-origin:top left;">
+
+                        <!-- ================= GIFT SUGGESTION ================= -->
+                        <div class="absolute anim-fade-up"
+                            style="width:50px; height:54px; left:calc(50% - 50px/2 - 1px); top:57px; z-index:2;">
+                            <img src="assets/icons/gift.svg" alt="gift" style="width:100%; height:100%;">
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:234px; height:43px; left:calc(50% - 234px/2 - 2px); top:121px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#4F4350;">Gift
+                                Suggestion</h4>
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:297px; height:87px; left:calc(50% - 297px/2 - 1.5px); top:174px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#8E668E;">
+                                Your presence is the greatest gift to<br>
+                                us. However, if you wish to bless<br>
+                                the couple further, we would truly<br>
+                                appreciate your kind gesture.
+                            </p>
+                        </div>
+
+                        <!-- Divider 1 -->
+                        <div class="absolute anim-fade-up"
+                            style="width:403px; height:21px; left:calc(50% - 403px/2 + 0.5px); top:271px; z-index:2;">
+                            <img src="assets/icons/goldbreak.svg" alt="divider" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- ================= NOTE ================= -->
+                        <div class="absolute anim-fade-up"
+                            style="width:59px; height:51px; left:calc(50% - 59px/2 - 0.66px); top:302px; z-index:2;">
+                            <img src="assets/icons/notice.svg" alt="notice" style="width:100%; height:100%;">
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:74px; height:43px; left:calc(50% - 74px/2 - 2px); top:363px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#4F4350;">Note</h4>
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:371px; height:119px; left:calc(50% - 371px/2 - 1.5px); top:416px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#8E668E;">
+                                To ensure a smooth and pleasant<br>
+                                experience for all our guests,<br>
+                                we request parents to kindly keep children<br>
+                                supervised and avoid any disruptive<br>
+                                behavior during the event.
+                            </p>
+                        </div>
+
+                        <!-- Divider 2 -->
+                        <div class="absolute anim-fade-up"
+                            style="width:403px; height:21px; left:calc(50% - 403px/2 + 0.5px); top:545px; z-index:2;">
+                            <img src="assets/icons/goldbreak.svg" alt="divider" style="width:100%; height:100%;">
+                        </div>
+
+                        <!-- ================= THANK YOU ================= -->
+                        <div class="absolute anim-fade-up"
+                            style="width:54px; height:48px; left:calc(50% - 54px/2); top:576px; z-index:2;">
+                            <img src="assets/icons/heart-outline.svg" alt="heart" style="width:100%; height:100%;">
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:165px; height:43px; left:calc(50% - 165px/2 - 0.5px); top:634px; z-index:2;">
+                            <h4 class="font-prata m-0 p-0"
+                                style="font-weight:400; font-size:32px; line-height:43px; color:#4F4350;">Thank You</h4>
+                        </div>
+
+                        <div class="absolute anim-fade-up flex justify-center text-center"
+                            style="width:371px; height:68px; left:calc(50% - 371px/2 - 0.5px); top:687px; z-index:2;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:18px; line-height:22px; color:#8E668E;">
+                                We look forward to celebrating this<br>
+                                beautiful occasion with you.<br>
+                                Your presence will truly mean a lot to us.
+                            </p>
+                        </div>
+
+                        <!-- ================= AWAITING CARD ================= -->
+                        <div class="absolute anim-fade-up border-box bg-white"
+                            style="width:430px; height:225px; left:calc(50% - 430px/2); top:779px; box-shadow:0px 0px 6.6px rgba(142, 102, 134, 0.4); z-index:2;">
+
+                            <div class="absolute flex justify-center text-center"
+                                style="width:210px; height:86px; left:calc(50% - 210px/2 + 1px); top:20px;">
+                                <h4 class="font-prata m-0 p-0"
+                                    style="font-weight:400; font-size:32px; line-height:43px; color:#4F4350;">Awaiting
+                                    to Welcome You</h4>
+                            </div>
+
+                            <div class="absolute"
+                                style="width:156px; height:43px; left:calc(50% - 156px/2 + 1px); top:98px;">
+                                <img src="assets/flowers/last.png" alt="flower" style="width:100%; height:100%;">
+                            </div>
+
+                            <div class="absolute flex justify-center text-center"
+                                style="width:371px; height:43px; left:calc(50% - 371px/2 - 0.5px); top:141px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:400; font-size:18px; line-height:22px; color:#4F4350;">
+                                    Looking forward to welcoming you<br>to this beautiful celebration.
+                                </p>
+                            </div>
+
+                            <div class="absolute flex justify-center text-center"
+                                style="width:336px; height:22px; left:calc(50% - 336px/2); top:187px;">
+                                <p class="font-rufina m-0 p-0"
+                                    style="font-weight:700; font-size:18px; line-height:22px; color:#9F6FA3;">
+                                    With best compliments from the family
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Connect with Us on WhatsApp Button -->
+                        <a href="https://wa.me/something"
+                            class="absolute flex items-center justify-center transition-transform hover:scale-105 anim-fade-up"
+                            style="width:398px; height:45px; left:calc(50% - 398px/2); top:1028px; background:#8E6686; box-shadow:0px 4px 4px rgba(142, 102, 142, 0.28); border-radius:10px; text-decoration:none; z-index:2;">
+                            <span class="font-rufina m-0 p-0 mb-1"
+                                style="font-weight:400; font-size:20px; line-height:25px; color:#FFFFFF;">Connect with
+                                Us on WhatsApp</span>
+                        </a>
+
+                        <!-- Crafted by Text -->
+                        <div class="absolute flex items-center justify-center text-center anim-fade-up"
+                            style="width:250px; height:19px; left:calc(50% - 250px/2); top:1097px; z-index:2; white-space:nowrap;">
+                            <p class="font-rufina m-0 p-0"
+                                style="font-weight:400; font-size:15px; line-height:19px; color:#625125;">
+                                Crafted by <a href="https://www.eaznexora.com" target="_blank"
+                                    style="color:#B69D74; text-decoration:none; font-weight:700;">Eaz Nexora</a>
+                            </p>
+                        </div>
+
+                        <!-- Bottom Nav (Frame 19) -->
+                        <div class="absolute flex items-center justify-center"
+                            style="width:183px; height:61px; left:calc(50% - 183px/2 - 0.5px); bottom:20px; background:#FCF8FE; box-shadow:0px 0px 4px rgba(142, 102, 142, 0.33); border-radius:15px; z-index:5; gap:10px;">
+                            <!-- Nav 1 -->
+                            <button onclick="scrollToSection('mehendiSection')"
+                                class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none p-0"
+                                style="width:51px; height:51px; background:transparent;">
+                                <img src="assets/icons/mehendi-n.svg" alt="Mehendi" style="width:100%; height:100%;">
+                            </button>
+                            <!-- Nav 2 -->
+                            <button onclick="scrollToSection('nikahSection')"
+                                class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none p-0"
+                                style="width:51px; height:51px; background:transparent;">
+                                <img src="assets/icons/ring-n.svg" alt="Nikah" style="width:100%; height:100%;">
+                            </button>
+                            <!-- Nav 3 -->
+                            <button onclick="scrollToSection('receptionSection')"
+                                class="rounded-full cursor-pointer transition-transform hover:scale-110 flex items-center justify-center border-none p-0"
+                                style="width:51px; height:51px; background:transparent;">
+                                <img src="assets/icons/reception-n.svg" alt="Reception"
+                                    style="width:100%; height:100%;">
+                            </button>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div><!-- /invitation-content -->
+
+
+            <!-- ================================ -->
+            <!-- FLOATING NAVIGATION (scroll-up)  -->
+            <!-- ================================ -->
+            <nav id="stickyNav"
+                class="absolute flex items-center justify-center nav-pill-shadow transition-all duration-300 opacity-0 pointer-events-none"
+                style="bottom:20px; left:50%; transform:translateX(-50%) translateY(16px); width:183px; height:61px; background:rgba(252,248,254,0.95); z-index:50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-radius:15px;">
+                <div class="flex items-center justify-between" style="width:190px; height:51px; padding:0 4px;">
+                    <button onclick="scrollToSection('mehendiSection')"
+                        class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                        style="width:51px; height:51px; background:transparent;">
+                        <img src="assets/icons/mehendi-n.png" alt="Mehendi" style="width:51px; height:51px;">
+                    </button>
+                    <button onclick="scrollToSection('nikahSection')"
+                        class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                        style="width:51px; height:51px; background:transparent;">
+                        <img src="assets/icons/ring-n.svg" alt="Nikah" style="width:51px; height:51px;">
+                    </button>
+                    <button onclick="scrollToSection('receptionSection')"
+                        class="rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
+                        style="width:51px; height:51px; background:transparent;">
+                        <img src="assets/icons/reception-n.svg" alt="Reception" style="width:51px; height:51px;">
+                    </button>
+                </div>
+            </nav>
+
+        </div><!-- /main-invitation -->
+
+
+        <!-- ============================== -->
+        <!-- INTRO CURTAIN SCREEN (UNTOUCHED) -->
+        <!-- ============================== -->
+        <div class="intro-screen" id="introScreen" onclick="openInvitation()">
+
+            <!-- Top Half -->
+            <div class="curtain curtain-top" id="curtainTop">
+                <div class="bg-pattern top-pattern"></div>
+                <p class="invite-text">A Special Invitation<br>Awaits You...</p>
+                <div class="gold-ribbon-half top"></div>
+
+                <!-- Center Seal (Moves naturally with top curtain) -->
+                <div class="center-lock" id="centerLock">
+                    <div class="seal">
+                        <div class="initials">
+                            <span class="f">F</span>
+                            <span class="h">H</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Half -->
+            <div class="curtain curtain-bottom" id="curtainBottom">
+                <div class="bg-pattern bottom-pattern"></div>
+                <p class="click-text">Click to Open</p>
+                <div class="gold-ribbon-half bottom"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Desktop Custom Scroll Track (outside phone frame, on dark bg) -->
+    <div class="desktop-scroll-track" id="desktopScrollTrack">
+        <div class="desktop-scroll-thumb" id="desktopScrollThumb"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/script.js?v=6"></script>
+</body>
+
+</html>
